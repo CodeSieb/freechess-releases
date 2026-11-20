@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "freechess@codesieb.github.io": {
+      "updates": [
+        {
+          "version": "6.15.1",
+          "update_link": "https://codesieb.github.io/freechess-releases/dl/freechess.com-6.15.1.xpi"
+        }
+      ]
+    }
+  }
+}
