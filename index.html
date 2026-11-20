@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>freeChess.com</title>
+<meta name="description" content="Free Game Review, unlimited puzzles, openings and analysis on chess.com, powered by Lichess.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 45 45'><text y='38' font-size='40'>♞</text></svg>">
+<style>
+  :root {
+    --bg:#302e2b; --bg2:#262522; --card:#3c3a37; --card2:#454340; --fg:#fff; --dim:#bab9b8; --dim2:#8b8987;
+    --green:#81b64c; --green-hi:#a3d160; --green-sh:#45753c; --line:#4b4847; --gold:#f7c631;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.55 "Segoe UI", system-ui, -apple-system, Helvetica, Arial, sans-serif; overflow-x:hidden; }
+  a { color:inherit; }
+  .wrap { max-width:1100px; margin:0 auto; padding:0 16px; }
+
+  /* top bar */
+  header { background:var(--bg2); border-bottom:1px solid #1f1e1c; }
+  header .wrap { display:flex; align-items:center; gap:10px; height:60px; }
+  .logo { display:flex; align-items:center; gap:8px; font-weight:800; font-size:22px; text-decoration:none; letter-spacing:-.3px; }
+  .logo .k { font-size:30px; color:var(--green); line-height:1; }
+  .logo b { color:var(--green); }
+  header nav { margin-left:auto; display:flex; gap:18px; font-weight:600; color:var(--dim); font-size:15px; }
+  header nav a { text-decoration:none; } header nav a:hover { color:#fff; }
+
+  /* hero */
+  .hero { position:relative; padding:64px 0 72px; overflow:hidden; }
+  .hero::before { content:""; position:absolute; inset:0; opacity:.07; pointer-events:none;
+    background:conic-gradient(#fff 25%, transparent 0 50%, #fff 0 75%, transparent 0) 0 0/96px 96px;
+    mask-image:radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); -webkit-mask-image:radial-gradient(ellipse at 70% 40%, #000 0%, transparent 70%); }
+  .hero .wrap { position:relative; display:grid; grid-template-columns:1.05fr 1fr; gap:48px; align-items:center; }
+  .pill { display:inline-flex; gap:6px; align-items:center; background:rgba(129,182,76,.15); color:var(--green-hi); font-weight:700; font-size:13px; padding:5px 12px; border-radius:99px; margin-bottom:16px; }
+  h1 { font-size:clamp(34px, 5.4vw, 54px); line-height:1.08; margin:0 0 16px; font-weight:800; letter-spacing:-1px; }
+  h1 em { font-style:normal; color:var(--green); }
+  .lead { color:var(--dim); font-size:19px; margin:0 0 28px; max-width:520px; }
+
+  .btn { display:inline-flex; align-items:center; justify-content:center; gap:10px; background:var(--green); color:#fff; text-decoration:none;
+    font-weight:800; font-size:20px; padding:16px 28px; border-radius:10px; box-shadow:0 5px 0 var(--green-sh); transition:filter .12s, transform .08s, box-shadow .08s; text-shadow:0 1px 0 rgba(0,0,0,.2); }
+  .btn:hover { filter:brightness(1.08); }
+  .btn:active { transform:translateY(3px); box-shadow:0 2px 0 var(--green-sh); }
+  .btn:focus-visible { outline:3px solid #fff; outline-offset:3px; }
+  .btn.alt { background:var(--card2); box-shadow:0 5px 0 #2a2826; }
+  .btn.off { pointer-events:none; opacity:.55; }
+  .btn svg { width:24px; height:24px; flex:none; }
+  .btns { display:flex; flex-wrap:wrap; gap:14px 14px; }
+  .meta { margin-top:18px; color:var(--dim2); font-size:14px; }
+
+  .shot { position:relative; border-radius:12px; overflow:hidden; background:var(--bg2); box-shadow:0 24px 60px rgba(0,0,0,.5), 0 0 0 1px rgba(255,255,255,.06); transform:perspective(1400px) rotateY(-8deg) rotateX(3deg); transition:transform .4s; }
+  .shot:hover { transform:none; }
+  .shot img { display:block; width:100%; height:auto; }
+  .shot .bar { display:flex; gap:6px; padding:9px 12px; background:#1f1e1c; }
+  .shot .bar i { width:10px; height:10px; border-radius:50%; background:#4b4847; }
+
+  /* stats strip */
+  .strip { background:var(--bg2); border-block:1px solid #1f1e1c; }
+  .strip .wrap { display:grid; grid-template-columns:repeat(4, 1fr); text-align:center; padding:22px 16px; gap:12px; }
+  .strip b { display:block; font-size:28px; color:var(--green); font-weight:800; }
+  .strip span { color:var(--dim); font-size:14px; }
+
+  section { padding:72px 0; }
+  h2 { font-size:clamp(26px, 3.6vw, 36px); margin:0 0 10px; font-weight:800; letter-spacing:-.5px; text-align:center; }
+  .sub { color:var(--dim); text-align:center; margin:0 auto 40px; max-width:600px; }
+
+  /* features */
+  .grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; }
+  .f { background:var(--card); border-radius:12px; padding:22px; border-bottom:4px solid #2e2c2a; transition:transform .15s, background .15s; }
+  .f:hover { transform:translateY(-3px); background:var(--card2); }
+  .f .ic { width:48px; height:48px; border-radius:10px; display:grid; place-items:center; font-size:26px; margin-bottom:12px; background:rgba(129,182,76,.16); }
+  .f h3 { margin:0 0 6px; font-size:18px; }
+  .f p { margin:0; color:var(--dim); font-size:15px; }
+
+  /* gallery */
+  .gal { display:flex; gap:16px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:12px; }
+  .gal figure { margin:0; flex:0 0 min(560px, 86%); scroll-snap-align:center; background:var(--card); border-radius:12px; overflow:hidden; }
+  .gal img { display:block; width:100%; height:auto; }
+  .gal figcaption { padding:12px 16px; font-weight:700; }
+  .gal::-webkit-scrollbar { height:8px; } .gal::-webkit-scrollbar-thumb { background:var(--line); border-radius:8px; }
+
+  /* install */
+  .install { background:var(--bg2); }
+  .two { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .card { background:var(--card); border-radius:12px; padding:26px; }
+  .card h3 { display:flex; align-items:center; gap:10px; margin:0 0 4px; font-size:21px; }
+  .card .dim { color:var(--dim); margin:0 0 18px; font-size:15px; }
+  .steps { counter-reset:s; list-style:none; padding:0; margin:20px 0 0; }
+  .steps li { counter-increment:s; position:relative; padding:0 0 12px 40px; color:var(--dim); }
+  .steps li::before { content:counter(s); position:absolute; left:0; top:-1px; width:27px; height:27px; border-radius:50%; background:var(--card2); color:#fff; font-weight:800; display:grid; place-items:center; font-size:14px; }
+  .steps b { color:#fff; }
+  code { background:#262522; padding:2px 7px; border-radius:5px; font-size:14px; color:var(--green-hi); }
+
+  /* faq */
+  details { background:var(--card); border-radius:10px; margin:0 auto 10px; max-width:760px; }
+  summary { cursor:pointer; padding:16px 20px; font-weight:700; list-style:none; display:flex; justify-content:space-between; }
+  summary::after { content:"+"; color:var(--green); font-size:22px; line-height:1; }
+  details[open] summary::after { content:"–"; }
+  details p { margin:0; padding:0 20px 18px; color:var(--dim); }
+
+  footer { background:var(--bg2); color:var(--dim2); font-size:14px; padding:28px 0; text-align:center; border-top:1px solid #1f1e1c; }
+
+  @media (max-width:860px) {
+    .hero .wrap, .two { grid-template-columns:1fr; }
+    .shot { transform:none; }
+    .grid { grid-template-columns:1fr 1fr; }
+    header nav { display:none; }
+    .hero { padding:40px 0 48px; }
+  }
+  @media (max-width:560px) {
+    .grid { grid-template-columns:1fr; }
+    .strip .wrap { grid-template-columns:1fr 1fr; }
+    .btn { width:100%; }
+    section { padding:52px 0; }
+  }
+  @media (prefers-reduced-motion:reduce) { * { transition:none !important; scroll-behavior:auto !important; } .shot { transform:none; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><span class="k" aria-hidden="true">♞</span><span>free<b>Chess</b>.com</span></a>
+    <nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <span class="pill">★ Version 6.14.0 · 100% free</span>
+      <h1>Game Review on chess.com. <em>Free. Unlimited.</em></h1>
+      <p class="lead">Accuracy, best moves, a coach that explains every mistake, unlimited puzzles and opening courses, right inside chess.com. Powered by Lichess and Stockfish.</p>
+      <div class="btns">
+        <a class="btn" id="ff" href="#soon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3zM5 19h14v2H5z"/></svg>Install for Firefox</a>
+        <a class="btn alt" href="#chrome">Chrome / Edge / Brave</a>
+      </div>
+      <p class="meta">No account, no ads, no tracking. Works on Firefox for Android too.</p>
+    </div>
+    <div class="shot"><div class="bar"><i></i><i></i><i></i></div><img src="img/1-review.png" alt="A free Game Review on a finished chess.com game" width="1280" height="800"></div>
+  </div>
+</div>
+
+<div class="strip"><div class="wrap">
+  <div><b>∞</b><span>Game Reviews</span></div>
+  <div><b>3M+</b><span>Lichess puzzles</span></div>
+  <div><b>SF 18</b><span>Stockfish on your PC</span></div>
+  <div><b>€0</b><span>Forever</span></div>
+</div></div>
+
+<section id="features">
+  <div class="wrap">
+    <h2>Everything Diamond has, without paying</h2>
+    <p class="sub">It adds a Free Hub and review buttons to chess.com. Your games stay where you play them.</p>
+    <div class="grid">
+      <div class="f"><div class="ic">📈</div><h3>Game Review</h3><p>Accuracy, Best / Mistake / Blunder labels, an eval graph and arrows for the move you should have played.</p></div>
+      <div class="f"><div class="ic">💬</div><h3>Coach + "Why?"</h3><p>Plain-English explanations, and a best line played out up to 10 moves or until checkmate.</p></div>
+      <div class="f"><div class="ic">🧩</div><h3>Unlimited puzzles</h3><p>Themes, a rating, Puzzle Rush and Storm. Your own blunders come back as puzzles.</p></div>
+      <div class="f"><div class="ic">📖</div><h3>Opening courses</h3><p>Spaced repetition, your own repertoire, and practice against the moves real players choose.</p></div>
+      <div class="f"><div class="ic">🔍</div><h3>Scout opponents</h3><p>See what they play and where they struggle, then turn it into a prep course.</p></div>
+      <div class="f"><div class="ic">🛡️</div><h3>Fair play built in</h3><p>All analysis tools lock automatically while you're in a live game.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="screens" style="padding-top:0">
+  <div class="wrap">
+    <h2>Have a look</h2>
+    <p class="sub">Swipe or scroll →</p>
+    <div class="gal">
+      <figure><img loading="lazy" src="img/1-review.png" alt="" width="1280" height="800"><figcaption>Game Review</figcaption></figure>
+      <figure><img loading="lazy" src="img/2-home.png" alt="" width="1280" height="800"><figcaption>Today's plan</figcaption></figure>
+      <figure><img loading="lazy" src="img/3-puzzles.png" alt="" width="1280" height="800"><figcaption>Puzzles</figcaption></figure>
+      <figure><img loading="lazy" src="img/4-openings.png" alt="" width="1280" height="800"><figcaption>Opening courses</figcaption></figure>
+      <figure><img loading="lazy" src="img/5-scout.png" alt="" width="1280" height="800"><figcaption>Scout an opponent</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="install" class="install">
+  <div class="wrap">
+    <h2>Install in a minute</h2>
+    <p class="sub">Then open any game on chess.com and press <b>Free Review</b>.</p>
+    <div class="two">
+      <div class="card">
+        <h3>🦊 Firefox</h3>
+        <p class="dim">Desktop and Android. Updates itself.</p>
+        <a class="btn" id="ff2" href="#soon">Install for Firefox</a>
+        <ol class="steps">
+          <li>Click the button and choose <b>Continue to installation</b>.</li>
+          <li>Click <b>Add</b>.</li>
+          <li>Open chess.com. Done.</li>
+        </ol>
+      </div>
+      <div class="card" id="chrome">
+        <h3>🌐 Chrome, Edge, Brave</h3>
+        <p class="dim">Installed by hand. Your progress is kept on updates.</p>
+        <a class="btn" href="dl/freechess.com-chrome-6.14.0.zip">Download for Chrome</a>
+        <ol class="steps">
+          <li>Unzip the file into a folder you'll keep.</li>
+          <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</li>
+          <li>Click <b>Load unpacked</b> and pick the folder.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <h2>Questions</h2>
+    <p class="sub"></p>
+    <details><summary>Is it really free?</summary><p>Yes. The analysis comes from Lichess, which is free and open source, with Stockfish running on your own computer as a backup.</p></details>
+    <details><summary>Is it allowed / fair play?</summary><p>Everything locks while you're in a live game, and there's an optional mode that hides the add-on completely during games. It only helps with finished games and training.</p></details>
+    <details><summary>What happens to my data?</summary><p>It stays in your browser. Optional sync uses your own Lichess account, encrypted with your own password. No analytics, no ads.</p></details>
+    <details><summary>How do I update on Chrome?</summary><p>Download the new zip, unzip it over the same folder, and click the reload arrow on the add-on in <code>chrome://extensions</code>.</p></details>
+  </div>
+</section>
+</main>
+
+<footer>freeChess.com 6.14.0 · Not affiliated with chess.com or Lichess · Support Lichess at <a href="https://lichess.org/patron">lichess.org/patron</a></footer>
+<script>
+  for (const id of ["ff", "ff2"]) { const a = document.getElementById(id); if (a && !/\.xpi$/.test(a.getAttribute("href"))) { a.classList.add("off"); a.lastChild.textContent = "Firefox: coming soon"; } }
+</script>
+</body>
+</html>
