@@ -99,6 +99,27 @@
   details[open] summary::after { content:"–"; }
   details p { margin:0; padding:0 20px 18px; color:var(--dim); }
 
+  .guide { margin-top:16px; }
+  .tabs { display:flex; gap:6px; margin:12px 0 20px; flex-wrap:wrap; }
+  .tabs button { background:var(--card2); color:var(--dim); border:0; font:inherit; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; }
+  .tabs button[aria-selected="true"] { background:var(--green); color:#fff; }
+  ol.big { counter-reset:b; list-style:none; padding:0; margin:0; }
+  ol.big > li { counter-increment:b; position:relative; padding:0 0 22px 52px; border-left:2px solid var(--line); margin-left:17px; padding-left:34px; }
+  ol.big > li:last-child { border-color:transparent; }
+  ol.big > li::before { content:counter(b); position:absolute; left:-18px; top:-2px; width:34px; height:34px; border-radius:50%; background:var(--green); color:#fff; font-weight:800; display:grid; place-items:center; box-shadow:0 3px 0 var(--green-sh); }
+  ol.big h4 { margin:2px 0 6px; font-size:18px; }
+  ol.big p { margin:0 0 8px; color:var(--dim); } ol.big p b { color:#fff; }
+  .warn { background:rgba(247,198,49,.12); border-left:4px solid var(--gold); padding:10px 14px; border-radius:6px; margin:8px 0; color:#f3e6b5; font-size:15px; }
+  .mock { background:#202020; border:1px solid #3a3a3a; border-radius:8px; padding:12px 14px; margin:8px 0 10px; display:flex; align-items:center; gap:14px; font-family:system-ui, sans-serif; font-size:14px; color:#e8eaed; max-width:460px; }
+  .mock.bar { justify-content:space-between; } .mock .sw { display:flex; align-items:center; gap:8px; margin-left:auto; }
+  .tog { width:34px; height:16px; border-radius:8px; background:#8ab4f8; position:relative; display:inline-block; } .tog::after { content:""; position:absolute; right:-2px; top:-3px; width:22px; height:22px; border-radius:50%; background:#1a73e8; box-shadow:0 0 0 6px rgba(138,180,248,.25); }
+  .mb { border:1px solid #8ab4f8; color:#8ab4f8; padding:5px 12px; border-radius:16px; font-weight:600; } .mb:first-child { box-shadow:0 0 0 3px rgba(129,182,76,.6); } .dimb { opacity:.45; border-color:#666; color:#aaa; }
+  .mock.folder .fi { font-size:30px; } .mock.folder small { display:block; color:#9aa0a6; }
+  .copy { display:flex; gap:8px; align-items:center; margin:4px 0 8px; } .copy code { font-size:16px; padding:8px 12px; }
+  .copy button { background:var(--card2); color:#fff; border:0; font:inherit; font-weight:700; padding:8px 14px; border-radius:8px; cursor:pointer; box-shadow:0 3px 0 #2a2826; }
+  .guide details { background:var(--card2); max-width:none; }
+  .news { max-width:760px; margin:0 auto; } .news li { color:var(--dim); margin:6px 0; }
+  .you { outline:3px solid var(--green); outline-offset:3px; }
   footer { background:var(--bg2); color:var(--dim2); font-size:14px; padding:28px 0; text-align:center; border-top:1px solid #1f1e1c; }
 
   @media (max-width:860px) {
@@ -121,7 +142,7 @@
 <header>
   <div class="wrap">
     <a class="logo" href="#"><span class="k" aria-hidden="true">♞</span><span>free<b>Chess</b>.com</span></a>
-    <nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#install">Install</a><a href="#faq">FAQ</a></nav>
+    <nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#install">Install</a><a href="#guide">Chrome guide</a><a href="#faq">FAQ</a></nav>
   </div>
 </header>
 
@@ -194,16 +215,77 @@
         </ol>
       </div>
       <div class="card" id="chrome">
-        <h3>🌐 Chrome, Edge, Brave</h3>
-        <p class="dim">Installed by hand. Your progress is kept on updates.</p>
-        <a class="btn" href="dl/freechess.com-chrome-6.15.1.zip">Download for Chrome</a>
-        <ol class="steps">
-          <li>Unzip the file into a folder you'll keep.</li>
-          <li>Open <code>chrome://extensions</code> and turn on <b>Developer mode</b>.</li>
-          <li>Click <b>Load unpacked</b> and pick the folder.</li>
-        </ol>
+        <h3>🌐 Chrome, Edge, Brave, Opera</h3>
+        <p class="dim">Installed by hand, takes about 2 minutes. Desktop only.</p>
+        <a class="btn" href="dl/freechess.com-chrome-6.15.1.zip" download>Download for Chrome</a>
+        <p class="dim" style="margin:10px 0 0">Then follow the guide below ↓</p>
       </div>
     </div>
+
+    <div class="guide card" id="guide">
+      <h3>Chrome install guide</h3>
+      <div class="tabs" role="tablist">
+        <button role="tab" data-os="win" aria-selected="true">Windows</button>
+        <button role="tab" data-os="mac">Mac</button>
+        <button role="tab" data-os="lin">Linux / ChromeOS</button>
+      </div>
+      <ol class="big">
+        <li>
+          <h4>Download the zip</h4>
+          <p>Click <b>Download for Chrome</b> above. You get a file called <code>freechess.com-chrome-6.15.1.zip</code> in your <b>Downloads</b> folder.</p>
+        </li>
+        <li>
+          <h4>Unzip it into a folder you'll keep</h4>
+          <p class="os win">Open your <b>Downloads</b> folder, <b>right-click</b> the zip and choose <b>Extract All…</b> Change the location to something permanent, for example <code>Documents\freechess</code>, then click <b>Extract</b>.</p>
+          <p class="os mac" hidden>Open your <b>Downloads</b> folder in Finder and <b>double-click</b> the zip. A folder appears next to it. Drag that folder somewhere permanent, for example <b>Documents</b>.</p>
+          <p class="os lin" hidden>Run <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code>, or right-click the zip and choose <b>Extract</b>. On ChromeOS, open the zip in Files and copy its contents into a new folder under <b>My files</b>.</p>
+          <div class="warn">⚠️ <b>Don't delete or move this folder afterwards.</b> Chrome runs the add-on straight from it. Loading the <code>.zip</code> itself doesn't work, it must be unzipped.</div>
+          <div class="mock folder"><span class="fi">📁</span><div><b>freechess</b><small>manifest.json · background.js · icons · …</small></div></div>
+          <p class="dim">Check: the folder you pick in step 4 must contain <code>manifest.json</code> directly, not another folder inside it.</p>
+        </li>
+        <li>
+          <h4>Open the extensions page and turn on Developer mode</h4>
+          <p>Paste this into the address bar and press Enter:</p>
+          <div class="copy"><code id="extUrl">chrome://extensions</code><button type="button" data-copy="extUrl">Copy</button></div>
+          <p class="dim">Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code> · Opera: <code>opera://extensions</code>. You can't click these links, browsers block that; paste them.</p>
+          <p>Turn on the <b>Developer mode</b> switch, top right (in Edge it's on the left).</p>
+          <div class="mock bar"><span>Extensions</span><span class="sw">Developer mode <i class="tog"></i></span></div>
+        </li>
+        <li>
+          <h4>Click "Load unpacked" and pick the folder</h4>
+          <p>A new row of buttons appears. Click <b>Load unpacked</b>, select the <b>freechess</b> folder from step 2 and click <b>Select Folder</b>.</p>
+          <div class="mock bar"><span class="mb">Load unpacked</span><span class="mb dimb">Pack extension</span><span class="mb dimb">Update</span></div>
+          <p><b>freeChess.com</b> now shows in the list. Click the 🧩 puzzle icon next to the address bar and the 📌 pin, so it's always visible.</p>
+        </li>
+        <li>
+          <h4>Open chess.com</h4>
+          <p>Go to <a href="https://www.chess.com" target="_blank" rel="noopener">chess.com</a> (reload it if it was already open), open a finished game and press <b>Free Review</b>. The <b>Free Hub</b> is in chess.com's left menu.</p>
+        </li>
+      </ol>
+
+      <h3 style="margin-top:28px">Updating on Chrome</h3>
+      <p class="dim" style="margin:0 0 6px">The add-on tells you when a big update is out.</p>
+      <ol class="steps">
+        <li>Download the new zip and unzip it <b>over the same folder</b> (choose "Replace" when asked).</li>
+        <li>Open <code>chrome://extensions</code> and click the <b>↻ reload</b> arrow on freeChess.com.</li>
+        <li>Your progress and settings stay.</li>
+      </ol>
+
+      <h3 style="margin-top:28px">Something wrong?</h3>
+      <details><summary>"Manifest file is missing or unreadable"</summary><p>You picked the wrong folder: probably the one around it. Open the folders until you see <code>manifest.json</code>, and select that folder.</p></details>
+      <details><summary>Chrome shows "Disable developer mode extensions"</summary><p>That's a normal warning for add-ons not from the Chrome store. Click the ✕ to close it (don't click Disable).</p></details>
+      <details><summary>The add-on vanished or says "Errors"</summary><p>The folder was moved, deleted or only partly replaced. Unzip it again in the same place and click ↻ reload. If it still fails, click <b>Remove</b> and do steps 2–4 again.</p></details>
+      <details><summary>Nothing shows on chess.com</summary><p>Reload the chess.com tab once after installing. Check the add-on is switched on in <code>chrome://extensions</code>.</p></details>
+      <details><summary>Phone or tablet?</summary><p>Chrome on Android and iPhone doesn't support add-ons. On Android, use <b>Firefox</b> and the Firefox button above.</p></details>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="news" style="padding-bottom:0" hidden>
+  <div class="wrap news card">
+    <h3 id="newsHead">What's new</h3>
+    <ul id="newsList"></ul>
   </div>
 </section>
 
@@ -222,6 +304,31 @@
 <footer>freeChess.com 6.15.1 · Not affiliated with chess.com or Lichess · Support Lichess at <a href="https://lichess.org/patron">lichess.org/patron</a></footer>
 <script>
   for (const id of ["ff", "ff2"]) { const a = document.getElementById(id); if (a && !/\.xpi$/.test(a.getAttribute("href"))) { a.classList.add("off"); a.lastChild.textContent = "Firefox: coming soon"; } }
+  // OS tabs in the Chrome guide
+  const pickOs = (os) => { for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", b.dataset.os === os); for (const p of document.querySelectorAll(".os")) p.hidden = !p.classList.contains(os); };
+  for (const b of document.querySelectorAll(".tabs button")) b.addEventListener("click", () => pickOs(b.dataset.os));
+  const ua = navigator.userAgent;
+  pickOs(/Mac/.test(ua) ? "mac" : /Linux|CrOS/.test(ua) && !/Android/.test(ua) ? "lin" : "win");
+  // Copy buttons
+  for (const b of document.querySelectorAll("[data-copy]")) b.addEventListener("click", async () => { try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = "Copied ✓"; setTimeout(() => b.textContent = "Copy", 1500); } catch {} });
+  // Point the main button at the visitor's browser
+  const isFF = /Firefox\//.test(ua), isMobile = /Android|iPhone|iPad/.test(ua);
+  const ext = /Edg\//.test(ua) ? "edge" : /OPR\//.test(ua) ? "opera" : "chrome";
+  if (!isFF && !isMobile) {
+    const alt = document.querySelector(".hero .btn.alt");
+    alt.textContent = "Install for " + ({ edge: "Edge", opera: "Opera", chrome: "Chrome" })[ext]; alt.href = "#chrome"; alt.classList.remove("alt");
+    document.getElementById("ff").classList.add("alt");
+    document.getElementById("extUrl").textContent = ext + "://extensions";
+    document.getElementById("chrome").classList.add("you");
+  } else if (isFF) document.getElementById("ff2").closest(".card").classList.add("you");
+  // What's new, from the release notes
+  fetch("latest.json", { cache: "no-store" }).then((r) => r.json()).then((l) => {
+    if (!l.notes?.length) return;
+    document.getElementById("newsHead").textContent = "What's new in " + l.version;
+    const ul = document.getElementById("newsList");
+    for (const n of l.notes) { const li = document.createElement("li"); li.textContent = n; ul.append(li); }
+    document.getElementById("news").hidden = false;
+  }).catch(() => {});
 </script>
 </body>
 </html>
