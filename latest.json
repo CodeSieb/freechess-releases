@@ -1,0 +1,12 @@
+{
+  "version": "6.15.0",
+  "major": true,
+  "notes": [
+    "\"Why?\" button: see why the best move is better, played out up to 10 moves or until mate",
+    "Puzzles no longer repeat, and regular Lichess puzzles open again",
+    "Much faster reviews on Chrome, and review marks now sit on the right pieces"
+  ],
+  "url": "https://codesieb.github.io/freechess-releases/",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.15.0.zip",
+  "date": "2026-11-20"
+}
