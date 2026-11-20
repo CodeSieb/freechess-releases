@@ -1,11 +1,11 @@
 {
-  "version": "6.17.0",
-  "major": true,
+  "version": "6.17.1",
+  "major": false,
   "notes": [
     "New: Chessable inside the hub (Learn → Chessable), with your own account and a dark hub style",
     "Firefox will ask to allow chessable.com once; that's for this tab"
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.17.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.17.1.zip",
   "date": "2026-11-20"
 }
