@@ -1,14 +1,15 @@
 {
-  "version": "6.19.5",
+  "version": "6.19.6",
   "major": false,
   "notes": [
+    "Share now copies only the link.",
+    "Bot games: the two players get their own names.",
+    "Shared review page redone: the board fits the screen, buttons right under it, eval bar, play-through, flip, swipe on phones, link to a move, PGN and Lichess buttons.",
+    "Shared links get a preview in chat apps, and you can see how often your reviews were opened (My reviews → Shared by you).",
     "Game Review: pieces now take longer for longer trips and wiggle into place, and fast-forwarding is calmer.",
-    "Review games against bots and games on chess.com's Analysis board: the Free Review button now shows up there too.",
-    "Courses: hide the starter courses with the ✕.",
-    "Chessable tab: no more wrong \"doesn't open inside the hub\" bar.",
-    "Messages no longer show raw code."
+    "Review games against bots and games on chess.com's Analysis board: the Free Review button now shows up there too."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.5.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.6.zip",
   "date": "2026-11-21"
 }
