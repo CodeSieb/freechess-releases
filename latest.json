@@ -1,13 +1,14 @@
 {
-  "version": "6.19.3",
+  "version": "6.19.5",
   "major": false,
   "notes": [
-    "Review games against bots and games on chess.com's Analysis board (moves are read from the page).",
+    "Game Review: pieces now take longer for longer trips and wiggle into place, and fast-forwarding is calmer.",
+    "Review games against bots and games on chess.com's Analysis board: the Free Review button now shows up there too.",
     "Courses: hide the starter courses with the ✕.",
     "Chessable tab: no more wrong \"doesn't open inside the hub\" bar.",
     "Messages no longer show raw code."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.3.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.5.zip",
   "date": "2026-11-21"
 }
