@@ -1,7 +1,8 @@
 {
-  "version": "6.19.6",
+  "version": "6.19.7",
   "major": false,
   "notes": [
+    "Why? explanations rewritten in plain words: which piece was under attack, what your move missed, what the best move fixes, how the trades end, and a tip to remember.",
     "Share now copies only the link.",
     "Bot games: the two players get their own names.",
     "Shared review page redone: the board fits the screen, buttons right under it, eval bar, play-through, flip, swipe on phones, link to a move, PGN and Lichess buttons.",
@@ -10,6 +11,6 @@
     "Review games against bots and games on chess.com's Analysis board: the Free Review button now shows up there too."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.6.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.7.zip",
   "date": "2026-11-21"
 }
