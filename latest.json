@@ -1,12 +1,11 @@
 {
-  "version": "6.18.0",
+  "version": "6.18.1",
   "major": false,
   "notes": [
-    "New: Analysis → My reviews, with your accuracy over time",
-    "Reviews now say how the game really ended (checkmate, on time, repetition…)",
-    "Translations for the newest parts, and a tidier phone layout"
+    "Faster analysis on your computer: Stockfish now uses several CPU cores at once",
+    "The download page is now in English, Dutch, French, German and Spanish"
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.18.0.zip",
-  "date": "2026-11-20"
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.18.1.zip",
+  "date": "2026-11-21"
 }

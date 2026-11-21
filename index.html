@@ -125,6 +125,10 @@
   .vers li { display:flex; gap:10px; align-items:center; padding:8px 0; border-bottom:1px solid var(--line); }
   .vers li b { min-width:64px; } .vers a { color:var(--green-hi); font-weight:600; text-decoration:none; font-size:14px; } .vers a:hover { text-decoration:underline; }
   .vers .new { background:var(--green); color:#fff; font-size:11px; font-weight:800; padding:2px 7px; border-radius:99px; }
+  .langpick { display:flex; align-items:center; gap:6px; margin-left:18px; color:var(--dim); }
+  .langpick select { background:var(--card); color:#fff; border:1px solid var(--line); border-radius:8px; padding:6px 8px; font:inherit; font-size:14px; font-weight:600; cursor:pointer; }
+  .langpick select:focus-visible { outline:2px solid var(--green); }
+  @media (max-width:860px) { .langpick { margin-left:auto; } }
   footer { background:var(--bg2); color:var(--dim2); font-size:14px; padding:28px 0; text-align:center; border-top:1px solid #1f1e1c; }
 
   @media (max-width:860px) {
@@ -147,7 +151,10 @@
 <header>
   <div class="wrap">
     <a class="logo" href="#"><span class="k" aria-hidden="true">♞</span><span>free<b>Chess</b>.com</span></a>
-    <nav><a href="#features">Features</a><a href="#screens">Screenshots</a><a href="#install">Install</a><a href="#guide">Chrome guide</a><a href="#faq">FAQ</a></nav>
+    <nav><a href="#features" data-t="t93">Features</a><a href="#screens" data-t="t94">Screenshots</a><a href="#install" data-t="t95">Install</a><a href="#guide" data-t="t96">Chrome guide</a><a href="#faq" data-t="t97">FAQ</a></nav>
+    <label class="langpick"><span aria-hidden="true">🌐</span><select id="lang" aria-label="Language">
+      <option value="en">English</option><option value="nl">Nederlands</option><option value="fr">Français</option><option value="de">Deutsch</option><option value="es">Español</option>
+    </select></label>
   </div>
 </header>
 
@@ -155,133 +162,135 @@
 <div class="hero">
   <div class="wrap">
     <div>
-      <span class="pill">★ Version 6.18.0 · 100% free</span>
-      <h1>Game Review on chess.com. <em>Free. Unlimited.</em></h1>
-      <p class="lead">Accuracy, best moves, a coach that explains every mistake, unlimited puzzles and opening courses, right inside chess.com. Powered by Lichess and Stockfish.</p>
+      <span class="pill" data-t="t98">★ Version 6.18.1 · 100% free</span>
+      <h1 data-t="t0">Game Review on chess.com. <em>Free. Unlimited.</em></h1>
+      <p class="lead" data-t="t1">Accuracy, best moves, a coach that explains every mistake, unlimited puzzles and opening courses, right inside chess.com. Powered by Lichess and Stockfish.</p>
       <div class="btns">
-        <a class="btn" id="ff" href="dl/freechess.com-6.18.0.xpi"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3zM5 19h14v2H5z"/></svg>Install for Firefox</a>
-        <a class="btn alt" href="#chrome">Chrome / Edge / Brave</a>
+        <a class="btn" id="ff" href="dl/freechess.com-6.18.1.xpi"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3v11.2l4-4 1.4 1.4L12 17l-5.4-5.4L8 10.2l4 4V3zM5 19h14v2H5z"/></svg><span data-t="t102">Install for Firefox</span></a>
+        <a class="btn alt" href="#chrome" data-t="t101">Chrome / Edge / Brave</a>
       </div>
-      <p class="meta">No account, no ads, no tracking. Works on Firefox for Android too.</p>
+      <p class="meta" data-t="t2">No account, no ads, no tracking. Works on Firefox for Android too.</p>
     </div>
     <div class="shot"><div class="bar"><i></i><i></i><i></i></div><img src="img/1-review.png" alt="A free Game Review on a finished chess.com game" width="1280" height="800"></div>
   </div>
 </div>
 
 <div class="strip"><div class="wrap">
-  <div><b>∞</b><span>Game Reviews</span></div>
-  <div><b>3M+</b><span>Lichess puzzles</span></div>
-  <div><b>SF 18</b><span>Stockfish on your PC</span></div>
-  <div><b>€0</b><span>Forever</span></div>
+  <div><b>∞</b><span data-t="t113">Game Reviews</span></div>
+  <div><b>3M+</b><span data-t="t114">Lichess puzzles</span></div>
+  <div><b>SF 18</b><span data-t="t115">Stockfish on your PC</span></div>
+  <div><b>€0</b><span data-t="t116">Forever</span></div>
 </div></div>
 
 <section id="features">
   <div class="wrap">
-    <h2>Everything Diamond has, without paying</h2>
-    <p class="sub">It adds a Free Hub and review buttons to chess.com. Your games stay where you play them.</p>
+    <h2 data-t="t3">Everything Diamond has, without paying</h2>
+    <p class="sub" data-t="t4">It adds a Free Hub and review buttons to chess.com. Your games stay where you play them.</p>
     <div class="grid">
-      <div class="f"><div class="ic">📈</div><h3>Game Review</h3><p>Accuracy, Best / Mistake / Blunder labels, an eval graph and arrows for the move you should have played.</p></div>
-      <div class="f"><div class="ic">💬</div><h3>Coach + "Why?"</h3><p>Plain-English explanations, and a best line played out up to 10 moves or until checkmate.</p></div>
-      <div class="f"><div class="ic">🧩</div><h3>Unlimited puzzles</h3><p>Themes, a rating, Puzzle Rush and Storm. Your own blunders come back as puzzles.</p></div>
-      <div class="f"><div class="ic">📖</div><h3>Opening courses</h3><p>Spaced repetition, your own repertoire, and practice against the moves real players choose.</p></div>
-      <div class="f"><div class="ic">🔍</div><h3>Scout opponents</h3><p>See what they play and where they struggle, then turn it into a prep course.</p></div>
-      <div class="f"><div class="ic">🛡️</div><h3>Fair play built in</h3><p>All analysis tools lock automatically while you're in a live game.</p></div>
+      <div class="f"><div class="ic">📈</div><h3 data-t="t5">Game Review</h3><p data-t="t6">Accuracy, Brilliant / Great / Best / Blunder labels like chess.com's, an eval graph and arrows for the move you should have played.</p></div>
+      <div class="f"><div class="ic">💬</div><h3 data-t="t7">Coach + "Why?"</h3><p data-t="t8">Plain-English explanations, and a best line played out up to 10 moves or until checkmate.</p></div>
+      <div class="f"><div class="ic">🧩</div><h3 data-t="t9">Unlimited puzzles</h3><p data-t="t10">Themes, a rating, Puzzle Rush and Storm. Your own blunders come back as puzzles.</p></div>
+      <div class="f"><div class="ic">📖</div><h3 data-t="t11">Opening courses</h3><p data-t="t12">Spaced repetition, your own repertoire, and practice against the moves real players choose.</p></div>
+      <div class="f"><div class="ic">🔍</div><h3 data-t="t13">Scout opponents</h3><p data-t="t14">See what they play and where they struggle, then turn it into a prep course.</p></div>
+      <div class="f"><div class="ic">📊</div><h3 data-t="t15">Track your progress</h3><p data-t="t16">Every reviewed game in one list, with your accuracy over time and your weakest openings.</p></div>
+      <div class="f"><div class="ic">⚡</div><h3 data-t="t17">Fast, even offline</h3><p data-t="t18">Lichess's servers when available, otherwise Stockfish 18 on all your CPU cores. No limits.</p></div>
+      <div class="f"><div class="ic">🛡️</div><h3 data-t="t19">Fair play built in</h3><p data-t="t20">All analysis tools lock automatically while you're in a live game.</p></div>
     </div>
   </div>
 </section>
 
 <section id="screens" style="padding-top:0">
   <div class="wrap">
-    <h2>Have a look</h2>
-    <p class="sub">Swipe or scroll →</p>
+    <h2 data-t="t21">Have a look</h2>
+    <p class="sub" data-t="t22">Swipe or scroll →</p>
     <div class="gal">
-      <figure><img loading="lazy" src="img/1-review.png" alt="" width="1280" height="800"><figcaption>Game Review</figcaption></figure>
-      <figure><img loading="lazy" src="img/2-home.png" alt="" width="1280" height="800"><figcaption>Today's plan</figcaption></figure>
-      <figure><img loading="lazy" src="img/3-puzzles.png" alt="" width="1280" height="800"><figcaption>Puzzles</figcaption></figure>
-      <figure><img loading="lazy" src="img/4-openings.png" alt="" width="1280" height="800"><figcaption>Opening courses</figcaption></figure>
-      <figure><img loading="lazy" src="img/5-scout.png" alt="" width="1280" height="800"><figcaption>Scout an opponent</figcaption></figure>
+      <figure><img loading="lazy" src="img/1-review.png" alt="" width="1280" height="800"><figcaption data-t="t23">Game Review</figcaption></figure>
+      <figure><img loading="lazy" src="img/2-home.png" alt="" width="1280" height="800"><figcaption data-t="t24">Today's plan</figcaption></figure>
+      <figure><img loading="lazy" src="img/3-puzzles.png" alt="" width="1280" height="800"><figcaption data-t="t25">Puzzles</figcaption></figure>
+      <figure><img loading="lazy" src="img/4-openings.png" alt="" width="1280" height="800"><figcaption data-t="t26">Opening courses</figcaption></figure>
+      <figure><img loading="lazy" src="img/5-scout.png" alt="" width="1280" height="800"><figcaption data-t="t27">Scout an opponent</figcaption></figure>
     </div>
   </div>
 </section>
 
 <section id="install" class="install">
   <div class="wrap">
-    <h2>Install in a minute</h2>
-    <p class="sub">Then open any game on chess.com and press <b>Free Review</b>.</p>
+    <h2 data-t="t28">Install in a minute</h2>
+    <p class="sub" data-t="t29">Then open any game on chess.com and press <b>Free Review</b>.</p>
     <div class="two">
       <div class="card">
-        <h3>🦊 Firefox</h3>
-        <p class="dim">Desktop and Android. Updates itself.</p>
-        <a class="btn" id="ff2" href="dl/freechess.com-6.18.0.xpi">Install for Firefox</a>
+        <h3 data-t="t30">🦊 Firefox</h3>
+        <p class="dim" data-t="t31">Desktop and Android. Updates itself.</p>
+        <a class="btn" id="ff2" href="dl/freechess.com-6.18.1.xpi" data-t="t102">Install for Firefox</a>
         <ol class="steps">
-          <li>Click the button and choose <b>Continue to installation</b>.</li>
-          <li>Click <b>Add</b>.</li>
-          <li>Open chess.com. Done.</li>
+          <li data-t="t32">Click the button and choose <b>Continue to installation</b>.</li>
+          <li data-t="t33">Click <b>Add</b>.</li>
+          <li data-t="t34">Open chess.com. Done.</li>
         </ol>
       </div>
       <div class="card" id="chrome">
-        <h3>🌐 Chrome, Edge, Brave, Opera</h3>
-        <p class="dim">Installed by hand, takes about 2 minutes. Desktop only.</p>
-        <a class="btn" href="dl/freechess.com-chrome-6.18.0.zip" download>Download for Chrome</a>
-        <p class="dim" style="margin:10px 0 0">Then follow the guide below ↓</p>
+        <h3 data-t="t35">🌐 Chrome, Edge, Brave, Opera</h3>
+        <p class="dim" data-t="t36">Installed by hand, takes about 2 minutes. Desktop only.</p>
+        <a class="btn" href="dl/freechess.com-chrome-6.18.1.zip" download data-t="t103">Download for Chrome</a>
+        <p class="dim" style="margin:10px 0 0" data-t="t37">Then follow the guide below ↓</p>
       </div>
     </div>
 
     <div class="guide card" id="guide">
-      <h3>Chrome install guide</h3>
+      <h3 data-t="t38">Chrome install guide</h3>
       <div class="tabs" role="tablist">
-        <button role="tab" data-os="win" aria-selected="true">Windows</button>
-        <button role="tab" data-os="mac">Mac</button>
-        <button role="tab" data-os="lin">Linux / ChromeOS</button>
+        <button role="tab" data-os="win" aria-selected="true" data-t="t104">Windows</button>
+        <button role="tab" data-os="mac" data-t="t105">Mac</button>
+        <button role="tab" data-os="lin" data-t="t106">Linux / ChromeOS</button>
       </div>
       <ol class="big">
         <li>
-          <h4>Download the zip</h4>
-          <p>Click <b>Download for Chrome</b> above. You get a file called <code>freechess.com-chrome-6.18.0.zip</code> in your <b>Downloads</b> folder.</p>
+          <h4 data-t="t40">Download the zip</h4>
+          <p data-t="t41">Click <b>Download for Chrome</b> above. You get a file called <code>freechess.com-chrome-6.18.1.zip</code> in your <b>Downloads</b> folder.</p>
         </li>
         <li>
-          <h4>Unzip it into a folder you'll keep</h4>
-          <p class="os win">Open your <b>Downloads</b> folder, <b>right-click</b> the zip and choose <b>Extract All…</b> Change the location to something permanent, for example <code>Documents\freechess</code>, then click <b>Extract</b>.</p>
-          <p class="os mac" hidden>Open your <b>Downloads</b> folder in Finder and <b>double-click</b> the zip. A folder appears next to it. Drag that folder somewhere permanent, for example <b>Documents</b>.</p>
-          <p class="os lin" hidden>Run <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code>, or right-click the zip and choose <b>Extract</b>. On ChromeOS, open the zip in Files and copy its contents into a new folder under <b>My files</b>.</p>
-          <div class="warn">⚠️ <b>Don't delete or move this folder afterwards.</b> Chrome runs the add-on straight from it. Loading the <code>.zip</code> itself doesn't work, it must be unzipped.</div>
+          <h4 data-t="t43">Unzip it into a folder you'll keep</h4>
+          <p class="os win" data-t="t44">Open your <b>Downloads</b> folder, <b>right-click</b> the zip and choose <b>Extract All…</b> Change the location to something permanent, for example <code>Documents\freechess</code>, then click <b>Extract</b>.</p>
+          <p class="os mac" hidden data-t="t45">Open your <b>Downloads</b> folder in Finder and <b>double-click</b> the zip. A folder appears next to it. Drag that folder somewhere permanent, for example <b>Documents</b>.</p>
+          <p class="os lin" hidden data-t="t46">Run <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code>, or right-click the zip and choose <b>Extract</b>. On ChromeOS, open the zip in Files and copy its contents into a new folder under <b>My files</b>.</p>
+          <div class="warn" data-t="t107">⚠️ <b>Don't delete or move this folder afterwards.</b> Chrome runs the add-on straight from it. Loading the <code>.zip</code> itself doesn't work, it must be unzipped.</div>
           <div class="mock folder"><span class="fi">📁</span><div><b>freechess</b><small>manifest.json · background.js · icons · …</small></div></div>
-          <p class="dim">Check: the folder you pick in step 4 must contain <code>manifest.json</code> directly, not another folder inside it.</p>
+          <p class="dim" data-t="t48">Check: the folder you pick in step 4 must contain <code>manifest.json</code> directly, not another folder inside it.</p>
         </li>
         <li>
-          <h4>Open the extensions page and turn on Developer mode</h4>
-          <p>Paste this into the address bar and press Enter:</p>
-          <div class="copy"><code id="extUrl">chrome://extensions</code><button type="button" data-copy="extUrl">Copy</button></div>
-          <p class="dim">Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code> · Opera: <code>opera://extensions</code>. You can't click these links, browsers block that; paste them.</p>
-          <p>Turn on the <b>Developer mode</b> switch, top right (in Edge it's on the left).</p>
-          <div class="mock bar"><span>Extensions</span><span class="sw">Developer mode <i class="tog"></i></span></div>
+          <h4 data-t="t50">Open the extensions page and turn on Developer mode</h4>
+          <p data-t="t51">Paste this into the address bar and press Enter:</p>
+          <div class="copy"><code id="extUrl">chrome://extensions</code><button type="button" data-copy="extUrl" data-t="t108">Copy</button></div>
+          <p class="dim" data-t="t52">Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code> · Opera: <code>opera://extensions</code>. You can't click these links, browsers block that; paste them.</p>
+          <p data-t="t53">Turn on the <b>Developer mode</b> switch, top right (in Edge it's on the left).</p>
+          <div class="mock bar"><span>Extensions</span><span class="sw" data-t="t109">Developer mode <i class="tog"></i></span></div>
         </li>
         <li>
-          <h4>Click "Load unpacked" and pick the folder</h4>
-          <p>A new row of buttons appears. Click <b>Load unpacked</b>, select the <b>freechess</b> folder from step 2 and click <b>Select Folder</b>.</p>
-          <div class="mock bar"><span class="mb">Load unpacked</span><span class="mb dimb">Pack extension</span><span class="mb dimb">Update</span></div>
-          <p><b>freeChess.com</b> now shows in the list. Click the 🧩 puzzle icon next to the address bar and the 📌 pin, so it's always visible.</p>
+          <h4 data-t="t55">Click "Load unpacked" and pick the folder</h4>
+          <p data-t="t56">A new row of buttons appears. Click <b>Load unpacked</b>, select the <b>freechess</b> folder from step 2 and click <b>Select Folder</b>.</p>
+          <div class="mock bar"><span class="mb" data-t="t110">Load unpacked</span><span class="mb dimb" data-t="t111">Pack extension</span><span class="mb dimb" data-t="t112">Update</span></div>
+          <p data-t="t57"><b>freeChess.com</b> now shows in the list. Click the 🧩 puzzle icon next to the address bar and the 📌 pin, so it's always visible.</p>
         </li>
         <li>
-          <h4>Open chess.com</h4>
-          <p>Go to <a href="https://www.chess.com" target="_blank" rel="noopener">chess.com</a> (reload it if it was already open), open a finished game and press <b>Free Review</b>. The <b>Free Hub</b> is in chess.com's left menu.</p>
+          <h4 data-t="t59">Open chess.com</h4>
+          <p data-t="t60">Go to <a href="https://www.chess.com" target="_blank" rel="noopener">chess.com</a> (reload it if it was already open), open a finished game and press <b>Free Review</b>. The <b>Free Hub</b> is in chess.com's left menu.</p>
         </li>
       </ol>
 
-      <h3 style="margin-top:28px">Updating on Chrome</h3>
-      <p class="dim" style="margin:0 0 6px">The add-on tells you when a big update is out.</p>
+      <h3 style="margin-top:28px" data-t="t61">Updating on Chrome</h3>
+      <p class="dim" style="margin:0 0 6px" data-t="t62">The add-on tells you when a big update is out.</p>
       <ol class="steps">
-        <li>Download the new zip and unzip it <b>over the same folder</b> (choose "Replace" when asked).</li>
-        <li>Open <code>chrome://extensions</code> and click the <b>↻ reload</b> arrow on freeChess.com.</li>
-        <li>Your progress and settings stay.</li>
+        <li data-t="t63">Download the new zip and unzip it <b>over the same folder</b> (choose "Replace" when asked).</li>
+        <li data-t="t64">Open <code>chrome://extensions</code> and click the <b>↻ reload</b> arrow on freeChess.com.</li>
+        <li data-t="t65">Your progress and settings stay.</li>
       </ol>
 
-      <h3 style="margin-top:28px">Something wrong?</h3>
-      <details><summary>"Manifest file is missing or unreadable"</summary><p>You picked the wrong folder: probably the one around it. Open the folders until you see <code>manifest.json</code>, and select that folder.</p></details>
-      <details><summary>Chrome shows "Disable developer mode extensions"</summary><p>That's a normal warning for add-ons not from the Chrome store. Click the ✕ to close it (don't click Disable).</p></details>
-      <details><summary>The add-on vanished or says "Errors"</summary><p>The folder was moved, deleted or only partly replaced. Unzip it again in the same place and click ↻ reload. If it still fails, click <b>Remove</b> and do steps 2–4 again.</p></details>
-      <details><summary>Nothing shows on chess.com</summary><p>Reload the chess.com tab once after installing. Check the add-on is switched on in <code>chrome://extensions</code>.</p></details>
-      <details><summary>Phone or tablet?</summary><p>Chrome on Android and iPhone doesn't support add-ons. On Android, use <b>Firefox</b> and the Firefox button above.</p></details>
+      <h3 style="margin-top:28px" data-t="t66">Something wrong?</h3>
+      <details><summary data-t="t67">"Manifest file is missing or unreadable"</summary><p data-t="t68">You picked the wrong folder: probably the one around it. Open the folders until you see <code>manifest.json</code>, and select that folder.</p></details>
+      <details><summary data-t="t69">Chrome shows "Disable developer mode extensions"</summary><p data-t="t70">That's a normal warning for add-ons not from the Chrome store. Click the ✕ to close it (don't click Disable).</p></details>
+      <details><summary data-t="t71">The add-on vanished or says "Errors"</summary><p data-t="t72">The folder was moved, deleted or only partly replaced. Unzip it again in the same place and click ↻ reload. If it still fails, click <b>Remove</b> and do steps 2–4 again.</p></details>
+      <details><summary data-t="t73">Nothing shows on chess.com</summary><p data-t="t74">Reload the chess.com tab once after installing. Check the add-on is switched on in <code>chrome://extensions</code>.</p></details>
+      <details><summary data-t="t75">Phone or tablet?</summary><p data-t="t76">Chrome on Android and iPhone doesn't support add-ons. On Android, use <b>Firefox</b> and the Firefox button above.</p></details>
     </div>
     </div>
   </div>
@@ -289,7 +298,7 @@
 
 <section id="news" style="padding-bottom:0" hidden>
   <div class="wrap news card">
-    <h3 id="newsHead">What's new</h3>
+    <h3 id="newsHead" data-t="t77">What's new</h3>
     <ul id="newsList"></ul>
   </div>
 </section>
@@ -297,13 +306,13 @@
 <section id="more" style="padding-bottom:0">
   <div class="wrap two">
     <div class="card qr">
-      <h3>📱 On your phone</h3>
-      <p class="dim">Scan this with your phone's camera, then open it in <b>Firefox for Android</b> and tap Install.</p>
+      <h3 data-t="t78">📱 On your phone</h3>
+      <p class="dim" data-t="t79">Scan this with your phone's camera, then open it in <b>Firefox for Android</b> and tap Install.</p>
       <img src="img/qr.svg" alt="QR code linking to this page" width="180" height="180">
     </div>
     <div class="card">
-      <h3>🗂 All versions</h3>
-      <p class="dim">The newest is at the top. Firefox updates itself; this list is for going back if a new version has a problem.</p>
+      <h3 data-t="t80">🗂 All versions</h3>
+      <p class="dim" data-t="t81">The newest is at the top. Firefox updates itself; this list is for going back if a new version has a problem.</p>
       <ul class="vers" id="vers"><li class="dim">Loading…</li></ul>
     </div>
   </div>
@@ -311,43 +320,190 @@
 
 <section id="faq">
   <div class="wrap">
-    <h2>Questions</h2>
+    <h2 data-t="t83">Questions</h2>
     <p class="sub"></p>
-    <details><summary>Is it really free?</summary><p>Yes. The analysis comes from Lichess, which is free and open source, with Stockfish running on your own computer as a backup.</p></details>
-    <details><summary>Is it allowed / fair play?</summary><p>Everything locks while you're in a live game, and there's an optional mode that hides the add-on completely during games. It only helps with finished games and training.</p></details>
-    <details><summary>What happens to my data?</summary><p>It stays in your browser. Optional sync uses your own Lichess account, encrypted with your own password. No analytics, no ads.</p></details>
-    <details><summary>How do I update on Chrome?</summary><p>Download the new zip, unzip it over the same folder, and click the reload arrow on the add-on in <code>chrome://extensions</code>.</p></details>
+    <details><summary data-t="t85">Is it really free?</summary><p data-t="t86">Yes. The analysis comes from Lichess, which is free and open source, with Stockfish running on your own computer as a backup.</p></details>
+    <details><summary data-t="t87">Is it allowed / fair play?</summary><p data-t="t88">Everything locks while you're in a live game, and there's an optional mode that hides the add-on completely during games. It only helps with finished games and training.</p></details>
+    <details><summary data-t="t89">What happens to my data?</summary><p data-t="t90">It stays in your browser. Optional sync uses your own Lichess account, encrypted with your own password. No analytics, no ads.</p></details>
+    <details><summary data-t="t91">How do I update on Chrome?</summary><p data-t="t92">Download the new zip, unzip it over the same folder, and click the reload arrow on the add-on in <code>chrome://extensions</code>.</p></details>
   </div>
 </section>
 </main>
 
-<footer>freeChess.com 6.18.0 · Not affiliated with chess.com or Lichess · Support Lichess at <a href="https://lichess.org/patron">lichess.org/patron</a></footer>
+<footer>freeChess.com 6.18.1 · Not affiliated with chess.com or Lichess · Support Lichess at <a href="https://lichess.org/patron">lichess.org/patron</a></footer>
+<script>// Download page translations: key → [Dutch, French, German, Spanish]. English is the page itself.
+window.SITE_I18N = {
+t93:["Functies","Fonctions","Funktionen","Funciones"],
+t94:["Screenshots","Captures","Screenshots","Capturas"],
+t95:["Installeren","Installer","Installieren","Instalar"],
+t96:["Chrome-handleiding","Guide Chrome","Chrome-Anleitung","Guía de Chrome"],
+t97:["Vragen","FAQ","FAQ","Preguntas"],
+t98:["★ Versie 6.18.1 · 100% gratis","★ Version 6.18.1 · 100 % gratuit","★ Version 6.18.1 · 100 % kostenlos","★ Versión 6.18.1 · 100 % gratis"],
+t0:["Partijanalyse op chess.com. <em>Gratis. Onbeperkt.</em>","L'analyse de partie sur chess.com. <em>Gratuite. Illimitée.</em>","Partieanalyse auf chess.com. <em>Kostenlos. Unbegrenzt.</em>","Análisis de partidas en chess.com. <em>Gratis. Ilimitado.</em>"],
+t1:["Nauwkeurigheid, beste zetten, een coach die elke fout uitlegt, onbeperkt puzzels en openingscursussen, gewoon in chess.com. Aangedreven door Lichess en Stockfish.","Précision, meilleurs coups, un coach qui explique chaque erreur, des problèmes et des cours d'ouvertures illimités, directement dans chess.com. Propulsé par Lichess et Stockfish.","Genauigkeit, beste Züge, ein Coach, der jeden Fehler erklärt, unbegrenzte Aufgaben und Eröffnungskurse, direkt in chess.com. Angetrieben von Lichess und Stockfish.","Precisión, mejores jugadas, un entrenador que explica cada error, problemas y cursos de aperturas ilimitados, dentro de chess.com. Con la tecnología de Lichess y Stockfish."],
+t102:["Installeren in Firefox","Installer dans Firefox","In Firefox installieren","Instalar en Firefox"],
+t101:["Chrome / Edge / Brave","Chrome / Edge / Brave","Chrome / Edge / Brave","Chrome / Edge / Brave"],
+t2:["Geen account, geen advertenties, geen tracking. Werkt ook in Firefox voor Android.","Pas de compte, pas de pub, pas de pistage. Fonctionne aussi sur Firefox pour Android.","Kein Konto, keine Werbung, kein Tracking. Läuft auch mit Firefox für Android.","Sin cuenta, sin anuncios, sin rastreo. También funciona en Firefox para Android."],
+t113:["Partijanalyses","Analyses de parties","Partieanalysen","Análisis de partidas"],
+t114:["Lichess-puzzels","Problèmes Lichess","Lichess-Aufgaben","Problemas de Lichess"],
+t115:["Stockfish op je pc","Stockfish sur ton PC","Stockfish auf deinem PC","Stockfish en tu PC"],
+t116:["Voor altijd","Pour toujours","Für immer","Para siempre"],
+t3:["Alles van Diamond, zonder te betalen","Tout ce qu'offre Diamond, sans payer","Alles, was Diamond bietet, ohne zu zahlen","Todo lo de Diamond, sin pagar"],
+t4:["Het voegt een Gratis Hub en analyseknoppen toe aan chess.com. Je partijen blijven waar je ze speelt.","Il ajoute un Hub gratuit et des boutons d'analyse à chess.com. Tes parties restent là où tu les joues.","Es fügt chess.com einen kostenlosen Hub und Analyse-Knöpfe hinzu. Deine Partien bleiben, wo du sie spielst.","Añade un Hub gratuito y botones de análisis a chess.com. Tus partidas se quedan donde las juegas."],
+t5:["Partijanalyse","Analyse de partie","Partieanalyse","Análisis de partidas"],
+t6:["Nauwkeurigheid, labels als Briljant / Geweldig / Beste / Blunder zoals op chess.com, een evaluatiegrafiek en pijlen voor de zet die je had moeten spelen.","Précision, mentions Brillant / Très bon / Meilleur / Gaffe comme sur chess.com, un graphique d'évaluation et des flèches vers le coup à jouer.","Genauigkeit, Bewertungen wie Brillant / Großartig / Bester / Patzer wie bei chess.com, eine Bewertungskurve und Pfeile für den besseren Zug.","Precisión, etiquetas Brillante / Genial / Mejor / Error grave como en chess.com, un gráfico de evaluación y flechas con la jugada que debiste hacer."],
+t7:["Coach + \"Waarom?\"","Coach + « Pourquoi ? »","Coach + „Warum?“","Entrenador + «¿Por qué?»"],
+t8:["Uitleg in gewone taal, en de beste variant tot 10 zetten ver of tot mat uitgespeeld.","Des explications simples, et la meilleure suite jouée jusqu'à 10 coups ou jusqu'au mat.","Erklärungen in einfacher Sprache und die beste Variante, bis zu 10 Züge weit oder bis zum Matt vorgespielt.","Explicaciones sencillas y la mejor línea jugada hasta 10 jugadas o hasta el mate."],
+t9:["Onbeperkt puzzels","Problèmes illimités","Unbegrenzte Aufgaben","Problemas ilimitados"],
+t10:["Thema's, een rating, Puzzel Rush en Storm. Je eigen blunders komen terug als puzzel.","Thèmes, un classement, Puzzle Rush et Storm. Tes propres gaffes reviennent sous forme de problèmes.","Themen, eine Wertung, Puzzle Rush und Storm. Deine eigenen Patzer kommen als Aufgaben zurück.","Temas, una puntuación, Puzzle Rush y Storm. Tus propios errores vuelven como problemas."],
+t11:["Openingscursussen","Cours d'ouvertures","Eröffnungskurse","Cursos de aperturas"],
+t12:["Gespreide herhaling, je eigen repertoire, en oefenen tegen de zetten die echte spelers kiezen.","Répétition espacée, ton propre répertoire, et de l'entraînement contre les coups que jouent de vrais joueurs.","Verteilte Wiederholung, dein eigenes Repertoire und Training gegen die Züge echter Spieler.","Repetición espaciada, tu propio repertorio y práctica contra las jugadas que eligen jugadores reales."],
+t13:["Tegenstanders verkennen","Espionner l'adversaire","Gegner ausspähen","Espiar rivales"],
+t14:["Zie wat ze spelen en waar ze moeite mee hebben, en maak er een voorbereidingscursus van.","Vois ce qu'il joue et où il bloque, puis transforme-le en cours de préparation.","Sieh, was er spielt und wo er Probleme hat, und mach daraus einen Vorbereitungskurs.","Mira qué juega y dónde falla, y conviértelo en un curso de preparación."],
+t15:["Volg je vooruitgang","Suis tes progrès","Verfolge deinen Fortschritt","Sigue tu progreso"],
+t16:["Elke geanalyseerde partij in één lijst, met je nauwkeurigheid door de tijd en je zwakste openingen.","Chaque partie analysée dans une liste, avec ta précision dans le temps et tes ouvertures les plus faibles.","Jede analysierte Partie in einer Liste, mit deiner Genauigkeit im Verlauf und deinen schwächsten Eröffnungen.","Cada partida analizada en una lista, con tu precisión a lo largo del tiempo y tus aperturas más débiles."],
+t17:["Snel, zelfs offline","Rapide, même hors ligne","Schnell, sogar offline","Rápido, incluso sin conexión"],
+t18:["De servers van Lichess als dat kan, anders Stockfish 18 op al je processorkernen. Geen limieten.","Les serveurs de Lichess quand c'est possible, sinon Stockfish 18 sur tous les cœurs de ton processeur. Sans limite.","Die Server von Lichess, wenn möglich, sonst Stockfish 18 auf allen Prozessorkernen. Ohne Limit.","Los servidores de Lichess cuando se puede; si no, Stockfish 18 en todos los núcleos de tu procesador. Sin límites."],
+t19:["Fair play ingebouwd","Fair-play intégré","Fair Play eingebaut","Juego limpio incorporado"],
+t20:["Alle analysehulpmiddelen worden automatisch vergrendeld tijdens een live partij.","Tous les outils d'analyse se verrouillent automatiquement pendant une partie en direct.","Alle Analysewerkzeuge sperren sich automatisch während einer Live-Partie.","Todas las herramientas de análisis se bloquean automáticamente durante una partida en vivo."],
+t21:["Neem een kijkje","Jette un œil","Schau es dir an","Échale un vistazo"],
+t22:["Veeg of scroll →","Fais glisser ou défiler →","Wischen oder scrollen →","Desliza o desplázate →"],
+t23:["Partijanalyse","Analyse de partie","Partieanalyse","Análisis de partidas"],
+t24:["Plan van vandaag","Programme du jour","Plan für heute","Plan de hoy"],
+t25:["Puzzels","Problèmes","Aufgaben","Problemas"],
+t26:["Openingscursussen","Cours d'ouvertures","Eröffnungskurse","Cursos de aperturas"],
+t27:["Een tegenstander verkennen","Espionner un adversaire","Einen Gegner ausspähen","Espiar a un rival"],
+t28:["Installeren in een minuut","Installé en une minute","In einer Minute installiert","Instalado en un minuto"],
+t29:["Open daarna een partij op chess.com en druk op <b>Gratis analyse</b>.","Ouvre ensuite une partie sur chess.com et appuie sur <b>Analyse gratuite</b>.","Öffne dann eine Partie auf chess.com und drücke <b>Kostenlose Analyse</b>.","Después abre una partida en chess.com y pulsa <b>Análisis gratis</b>."],
+t30:["🦊 Firefox","🦊 Firefox","🦊 Firefox","🦊 Firefox"],
+t31:["Computer en Android. Werkt zichzelf bij.","Ordinateur et Android. Se met à jour tout seul.","Computer und Android. Aktualisiert sich selbst.","Ordenador y Android. Se actualiza solo."],
+t32:["Klik op de knop en kies <b>Doorgaan met installatie</b>.","Clique sur le bouton et choisis <b>Continuer l'installation</b>.","Klick auf den Knopf und wähle <b>Installation fortsetzen</b>.","Haz clic en el botón y elige <b>Continuar con la instalación</b>."],
+t33:["Klik op <b>Toevoegen</b>.","Clique sur <b>Ajouter</b>.","Klick auf <b>Hinzufügen</b>.","Haz clic en <b>Añadir</b>."],
+t34:["Open chess.com. Klaar.","Ouvre chess.com. C'est fait.","Öffne chess.com. Fertig.","Abre chess.com. Listo."],
+t35:["🌐 Chrome, Edge, Brave, Opera","🌐 Chrome, Edge, Brave, Opera","🌐 Chrome, Edge, Brave, Opera","🌐 Chrome, Edge, Brave, Opera"],
+t36:["Handmatig geïnstalleerd, duurt ongeveer 2 minuten. Alleen op de computer.","Installation manuelle, environ 2 minutes. Ordinateur uniquement.","Manuelle Installation, etwa 2 Minuten. Nur am Computer.","Instalación manual, unos 2 minutos. Solo en ordenador."],
+t103:["Downloaden voor Chrome","Télécharger pour Chrome","Für Chrome herunterladen","Descargar para Chrome"],
+t37:["Volg daarna de handleiding hieronder ↓","Suis ensuite le guide ci-dessous ↓","Folge dann der Anleitung unten ↓","Luego sigue la guía de abajo ↓"],
+t38:["Installatiehandleiding voor Chrome","Guide d'installation pour Chrome","Installationsanleitung für Chrome","Guía de instalación para Chrome"],
+t104:["Windows","Windows","Windows","Windows"],t105:["Mac","Mac","Mac","Mac"],t106:["Linux / ChromeOS","Linux / ChromeOS","Linux / ChromeOS","Linux / ChromeOS"],
+t40:["Download de zip","Télécharge le zip","Lade die ZIP-Datei herunter","Descarga el zip"],
+t41:["Klik hierboven op <b>Downloaden voor Chrome</b>. Je krijgt een bestand <code>freechess.com-chrome-6.18.1.zip</code> in je map <b>Downloads</b>.","Clique sur <b>Télécharger pour Chrome</b> ci-dessus. Tu obtiens un fichier <code>freechess.com-chrome-6.18.1.zip</code> dans ton dossier <b>Téléchargements</b>.","Klick oben auf <b>Für Chrome herunterladen</b>. Du bekommst die Datei <code>freechess.com-chrome-6.18.1.zip</code> in deinem Ordner <b>Downloads</b>.","Haz clic arriba en <b>Descargar para Chrome</b>. Obtendrás un archivo <code>freechess.com-chrome-6.18.1.zip</code> en tu carpeta <b>Descargas</b>."],
+t43:["Pak hem uit in een map die je bewaart","Décompresse-le dans un dossier que tu gardes","Entpacke sie in einen Ordner, den du behältst","Descomprímelo en una carpeta que vayas a conservar"],
+t44:["Open je map <b>Downloads</b>, <b>klik met rechts</b> op de zip en kies <b>Alles uitpakken…</b> Kies een vaste plek, bijvoorbeeld <code>Documenten\\freechess</code>, en klik op <b>Uitpakken</b>.","Ouvre ton dossier <b>Téléchargements</b>, fais un <b>clic droit</b> sur le zip et choisis <b>Extraire tout…</b> Choisis un emplacement durable, par exemple <code>Documents\\freechess</code>, puis clique sur <b>Extraire</b>.","Öffne deinen Ordner <b>Downloads</b>, <b>rechtsklicke</b> auf die ZIP-Datei und wähle <b>Alle extrahieren…</b> Wähle einen festen Ort, zum Beispiel <code>Dokumente\\freechess</code>, und klicke auf <b>Extrahieren</b>.","Abre tu carpeta <b>Descargas</b>, haz <b>clic derecho</b> en el zip y elige <b>Extraer todo…</b> Elige un lugar fijo, por ejemplo <code>Documentos\\freechess</code>, y haz clic en <b>Extraer</b>."],
+t45:["Open je map <b>Downloads</b> in Finder en <b>dubbelklik</b> op de zip. Er verschijnt een map naast. Sleep die map naar een vaste plek, bijvoorbeeld <b>Documenten</b>.","Ouvre ton dossier <b>Téléchargements</b> dans le Finder et <b>double-clique</b> sur le zip. Un dossier apparaît à côté. Glisse-le à un endroit durable, par exemple <b>Documents</b>.","Öffne deinen Ordner <b>Downloads</b> im Finder und <b>doppelklicke</b> auf die ZIP-Datei. Daneben erscheint ein Ordner. Zieh ihn an einen festen Ort, zum Beispiel <b>Dokumente</b>.","Abre tu carpeta <b>Descargas</b> en el Finder y haz <b>doble clic</b> en el zip. Aparece una carpeta al lado. Arrástrala a un lugar fijo, por ejemplo <b>Documentos</b>."],
+t46:["Voer <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code> uit, of klik met rechts op de zip en kies <b>Uitpakken</b>. Op ChromeOS open je de zip in Bestanden en kopieer je de inhoud naar een nieuwe map onder <b>Mijn bestanden</b>.","Lance <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code>, ou fais un clic droit sur le zip et choisis <b>Extraire</b>. Sur ChromeOS, ouvre le zip dans Fichiers et copie son contenu dans un nouveau dossier sous <b>Mes fichiers</b>.","Führe <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code> aus oder rechtsklicke auf die ZIP-Datei und wähle <b>Entpacken</b>. Unter ChromeOS öffnest du die ZIP-Datei in Dateien und kopierst den Inhalt in einen neuen Ordner unter <b>Meine Dateien</b>.","Ejecuta <code>unzip freechess.com-chrome-*.zip -d ~/freechess</code>, o haz clic derecho en el zip y elige <b>Extraer</b>. En ChromeOS, abre el zip en Archivos y copia su contenido en una carpeta nueva dentro de <b>Mis archivos</b>."],
+t107:["⚠️ <b>Verwijder of verplaats deze map daarna niet.</b> Chrome draait de add-on rechtstreeks vanuit die map. De <code>.zip</code> zelf laden werkt niet, hij moet uitgepakt zijn.","⚠️ <b>Ne supprime pas et ne déplace pas ce dossier ensuite.</b> Chrome lance l'extension directement depuis ce dossier. Charger le <code>.zip</code> lui-même ne marche pas, il doit être décompressé.","⚠️ <b>Lösche oder verschiebe diesen Ordner danach nicht.</b> Chrome startet das Add-on direkt daraus. Die <code>.zip</code> selbst zu laden funktioniert nicht, sie muss entpackt sein.","⚠️ <b>No borres ni muevas esta carpeta después.</b> Chrome ejecuta el complemento directamente desde ella. Cargar el <code>.zip</code> no funciona; tiene que estar descomprimido."],
+t48:["Controle: de map die je in stap 4 kiest, moet <code>manifest.json</code> direct bevatten, niet nog een map erin.","Vérifie : le dossier choisi à l'étape 4 doit contenir <code>manifest.json</code> directement, pas un autre dossier.","Prüfe: Der Ordner, den du in Schritt 4 wählst, muss <code>manifest.json</code> direkt enthalten, nicht noch einen Ordner.","Comprueba: la carpeta que elijas en el paso 4 debe contener <code>manifest.json</code> directamente, no otra carpeta dentro."],
+t50:["Open de extensiepagina en zet de ontwikkelaarsmodus aan","Ouvre la page des extensions et active le mode développeur","Öffne die Erweiterungsseite und schalte den Entwicklermodus ein","Abre la página de extensiones y activa el modo de desarrollador"],
+t51:["Plak dit in de adresbalk en druk op Enter:","Colle ceci dans la barre d'adresse et appuie sur Entrée :","Füge das in die Adresszeile ein und drücke Enter:","Pega esto en la barra de direcciones y pulsa Intro:"],
+t108:["Kopieer","Copier","Kopieren","Copiar"],
+t52:["Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code> · Opera: <code>opera://extensions</code>. Je kunt hier niet op klikken, browsers blokkeren dat; plak ze.","Edge : <code>edge://extensions</code> · Brave : <code>brave://extensions</code> · Opera : <code>opera://extensions</code>. Ces liens ne sont pas cliquables, les navigateurs le bloquent ; colle-les.","Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code> · Opera: <code>opera://extensions</code>. Anklicken geht nicht, Browser blockieren das; füge sie ein.","Edge: <code>edge://extensions</code> · Brave: <code>brave://extensions</code> · Opera: <code>opera://extensions</code>. No se pueden pulsar, los navegadores lo bloquean; pégalas."],
+t53:["Zet de schakelaar <b>Ontwikkelaarsmodus</b> aan, rechtsboven (in Edge links).","Active l'interrupteur <b>Mode développeur</b>, en haut à droite (à gauche dans Edge).","Schalte <b>Entwicklermodus</b> oben rechts ein (in Edge links).","Activa el interruptor <b>Modo de desarrollador</b>, arriba a la derecha (en Edge, a la izquierda)."],
+t109:["Ontwikkelaarsmodus <i class=\"tog\"></i>","Mode développeur <i class=\"tog\"></i>","Entwicklermodus <i class=\"tog\"></i>","Modo de desarrollador <i class=\"tog\"></i>"],
+t55:["Klik op \"Uitgepakte extensie laden\" en kies de map","Clique sur « Charger l'extension non empaquetée » et choisis le dossier","Klick auf „Entpackte Erweiterung laden“ und wähle den Ordner","Haz clic en «Cargar descomprimida» y elige la carpeta"],
+t56:["Er verschijnt een nieuwe rij knoppen. Klik op <b>Uitgepakte extensie laden</b>, kies de map <b>freechess</b> uit stap 2 en klik op <b>Map selecteren</b>.","Une nouvelle rangée de boutons apparaît. Clique sur <b>Charger l'extension non empaquetée</b>, choisis le dossier <b>freechess</b> de l'étape 2 et clique sur <b>Sélectionner le dossier</b>.","Eine neue Knopfreihe erscheint. Klick auf <b>Entpackte Erweiterung laden</b>, wähle den Ordner <b>freechess</b> aus Schritt 2 und klick auf <b>Ordner auswählen</b>.","Aparece una nueva fila de botones. Haz clic en <b>Cargar descomprimida</b>, elige la carpeta <b>freechess</b> del paso 2 y haz clic en <b>Seleccionar carpeta</b>."],
+t110:["Uitgepakte extensie laden","Charger l'extension non empaquetée","Entpackte Erweiterung laden","Cargar descomprimida"],
+t111:["Extensie inpakken","Empaqueter l'extension","Erweiterung packen","Empaquetar extensión"],
+t112:["Bijwerken","Mettre à jour","Aktualisieren","Actualizar"],
+t57:["<b>freeChess.com</b> staat nu in de lijst. Klik op het 🧩 puzzelstukje naast de adresbalk en op het 📌 punaise, zodat hij altijd zichtbaar is.","<b>freeChess.com</b> apparaît dans la liste. Clique sur l'icône 🧩 à côté de la barre d'adresse puis sur l'épingle 📌 pour la garder visible.","<b>freeChess.com</b> steht jetzt in der Liste. Klick auf das 🧩 Puzzle-Symbol neben der Adresszeile und auf die 📌 Nadel, damit es immer sichtbar ist.","<b>freeChess.com</b> ya aparece en la lista. Pulsa el icono 🧩 junto a la barra de direcciones y la chincheta 📌 para tenerlo siempre a la vista."],
+t59:["Open chess.com","Ouvre chess.com","Öffne chess.com","Abre chess.com"],
+t60:["Ga naar <a href=\"https://www.chess.com\" target=\"_blank\" rel=\"noopener\">chess.com</a> (herlaad de pagina als hij al open stond), open een afgelopen partij en druk op <b>Gratis analyse</b>. De <b>Gratis Hub</b> staat in het linkermenu van chess.com.","Va sur <a href=\"https://www.chess.com\" target=\"_blank\" rel=\"noopener\">chess.com</a> (recharge la page si elle était ouverte), ouvre une partie terminée et appuie sur <b>Analyse gratuite</b>. Le <b>Hub gratuit</b> est dans le menu de gauche de chess.com.","Geh auf <a href=\"https://www.chess.com\" target=\"_blank\" rel=\"noopener\">chess.com</a> (lade neu, falls es schon offen war), öffne eine beendete Partie und drücke <b>Kostenlose Analyse</b>. Der <b>kostenlose Hub</b> ist im linken Menü von chess.com.","Ve a <a href=\"https://www.chess.com\" target=\"_blank\" rel=\"noopener\">chess.com</a> (recarga si ya estaba abierto), abre una partida terminada y pulsa <b>Análisis gratis</b>. El <b>Hub gratuito</b> está en el menú izquierdo de chess.com."],
+t61:["Bijwerken in Chrome","Mettre à jour dans Chrome","In Chrome aktualisieren","Actualizar en Chrome"],
+t62:["De add-on laat het weten als er een grote update is.","L'extension te prévient quand une grosse mise à jour sort.","Das Add-on sagt Bescheid, wenn ein großes Update erscheint.","El complemento te avisa cuando sale una actualización importante."],
+t63:["Download de nieuwe zip en pak hem uit <b>over dezelfde map</b> (kies \"Vervangen\" als daarom gevraagd wordt).","Télécharge le nouveau zip et décompresse-le <b>par-dessus le même dossier</b> (choisis « Remplacer » si on te le demande).","Lade die neue ZIP-Datei herunter und entpacke sie <b>über denselben Ordner</b> (wähle „Ersetzen“, wenn gefragt).","Descarga el nuevo zip y descomprímelo <b>sobre la misma carpeta</b> (elige «Reemplazar» si te lo pregunta)."],
+t64:["Open <code>chrome://extensions</code> en klik op het <b>↻ herlaad</b>-pijltje bij freeChess.com.","Ouvre <code>chrome://extensions</code> et clique sur la flèche <b>↻ recharger</b> de freeChess.com.","Öffne <code>chrome://extensions</code> und klick auf den <b>↻ Neu laden</b>-Pfeil bei freeChess.com.","Abre <code>chrome://extensions</code> y pulsa la flecha <b>↻ recargar</b> de freeChess.com."],
+t65:["Je voortgang en instellingen blijven bewaard.","Ta progression et tes réglages sont conservés.","Dein Fortschritt und deine Einstellungen bleiben erhalten.","Tu progreso y tus ajustes se conservan."],
+t66:["Gaat er iets mis?","Un problème ?","Etwas stimmt nicht?","¿Algo va mal?"],
+t67:["\"Manifestbestand ontbreekt of is onleesbaar\"","« Fichier manifeste manquant ou illisible »","„Manifest-Datei fehlt oder ist nicht lesbar“","«Falta el archivo de manifiesto o no se puede leer»"],
+t68:["Je koos de verkeerde map, waarschijnlijk de map eromheen. Open de mappen tot je <code>manifest.json</code> ziet en kies die map.","Tu as choisi le mauvais dossier, sans doute celui qui l'entoure. Ouvre les dossiers jusqu'à voir <code>manifest.json</code> et choisis ce dossier.","Du hast den falschen Ordner gewählt, wahrscheinlich den äußeren. Öffne die Ordner, bis du <code>manifest.json</code> siehst, und wähle diesen Ordner.","Elegiste la carpeta equivocada, seguramente la de fuera. Abre carpetas hasta ver <code>manifest.json</code> y elige esa carpeta."],
+t69:["Chrome toont \"Extensies in ontwikkelaarsmodus uitschakelen\"","Chrome affiche « Désactiver les extensions en mode développeur »","Chrome zeigt „Erweiterungen im Entwicklermodus deaktivieren“","Chrome muestra «Desactivar extensiones en modo de desarrollador»"],
+t70:["Dat is een normale waarschuwing voor add-ons die niet uit de Chrome-winkel komen. Klik op ✕ om hem te sluiten (niet op Uitschakelen).","C'est un avertissement normal pour les extensions hors Chrome Web Store. Clique sur ✕ pour le fermer (pas sur Désactiver).","Das ist eine normale Warnung für Add-ons, die nicht aus dem Chrome Web Store kommen. Klick auf ✕, um sie zu schließen (nicht auf Deaktivieren).","Es un aviso normal para complementos que no vienen de la Chrome Web Store. Pulsa ✕ para cerrarlo (no Desactivar)."],
+t71:["De add-on is verdwenen of toont \"Fouten\"","L'extension a disparu ou affiche « Erreurs »","Das Add-on ist verschwunden oder zeigt „Fehler“","El complemento desapareció o muestra «Errores»"],
+t72:["De map is verplaatst, verwijderd of maar half vervangen. Pak hem opnieuw uit op dezelfde plek en klik op ↻ herladen. Lukt het nog steeds niet, klik dan op <b>Verwijderen</b> en doe stap 2–4 opnieuw.","Le dossier a été déplacé, supprimé ou remplacé à moitié. Décompresse-le à nouveau au même endroit et clique sur ↻. Si ça ne marche toujours pas, clique sur <b>Supprimer</b> et refais les étapes 2 à 4.","Der Ordner wurde verschoben, gelöscht oder nur teilweise ersetzt. Entpacke ihn am selben Ort neu und klick auf ↻. Klappt es immer noch nicht, klick auf <b>Entfernen</b> und mach Schritt 2–4 noch einmal.","La carpeta se movió, se borró o se reemplazó a medias. Descomprímela otra vez en el mismo sitio y pulsa ↻. Si sigue fallando, pulsa <b>Quitar</b> y repite los pasos 2 a 4."],
+t73:["Er verschijnt niets op chess.com","Rien n'apparaît sur chess.com","Auf chess.com erscheint nichts","No aparece nada en chess.com"],
+t74:["Herlaad het chess.com-tabblad één keer na het installeren. Controleer of de add-on aan staat in <code>chrome://extensions</code>.","Recharge l'onglet chess.com une fois après l'installation. Vérifie que l'extension est activée dans <code>chrome://extensions</code>.","Lade den chess.com-Tab nach der Installation einmal neu. Prüfe, ob das Add-on in <code>chrome://extensions</code> eingeschaltet ist.","Recarga la pestaña de chess.com una vez tras instalar. Comprueba que el complemento está activado en <code>chrome://extensions</code>."],
+t75:["Telefoon of tablet?","Téléphone ou tablette ?","Handy oder Tablet?","¿Móvil o tableta?"],
+t76:["Chrome op Android en iPhone ondersteunt geen add-ons. Gebruik op Android <b>Firefox</b> en de Firefox-knop hierboven.","Chrome sur Android et iPhone ne prend pas en charge les extensions. Sur Android, utilise <b>Firefox</b> et le bouton Firefox ci-dessus.","Chrome auf Android und iPhone unterstützt keine Add-ons. Nutze auf Android <b>Firefox</b> und den Firefox-Knopf oben.","Chrome en Android y iPhone no admite complementos. En Android, usa <b>Firefox</b> y el botón de Firefox de arriba."],
+t77:["Wat is er nieuw","Quoi de neuf","Was ist neu","Novedades"],
+t78:["📱 Op je telefoon","📱 Sur ton téléphone","📱 Auf dem Handy","📱 En tu móvil"],
+t79:["Scan dit met de camera van je telefoon, open het in <b>Firefox voor Android</b> en tik op Installeren.","Scanne ceci avec l'appareil photo de ton téléphone, ouvre-le dans <b>Firefox pour Android</b> et appuie sur Installer.","Scanne das mit der Handykamera, öffne es in <b>Firefox für Android</b> und tippe auf Installieren.","Escanéalo con la cámara del móvil, ábrelo en <b>Firefox para Android</b> y toca Instalar."],
+t80:["🗂 Alle versies","🗂 Toutes les versions","🗂 Alle Versionen","🗂 Todas las versiones"],
+t81:["De nieuwste staat bovenaan. Firefox werkt zichzelf bij; deze lijst is om terug te gaan als een nieuwe versie een probleem heeft.","La plus récente est en haut. Firefox se met à jour seul ; cette liste sert à revenir en arrière si une version pose problème.","Die neueste steht oben. Firefox aktualisiert sich selbst; die Liste ist zum Zurückgehen, falls eine neue Version Probleme macht.","La más nueva está arriba. Firefox se actualiza solo; esta lista sirve para volver atrás si una versión nueva da problemas."],
+t83:["Vragen","Questions","Fragen","Preguntas"],
+t85:["Is het echt gratis?","C'est vraiment gratuit ?","Ist es wirklich kostenlos?","¿De verdad es gratis?"],
+t86:["Ja. De analyse komt van Lichess, dat gratis en open source is, met Stockfish op je eigen computer als reserve.","Oui. L'analyse vient de Lichess, gratuit et open source, avec Stockfish sur ton ordinateur en secours.","Ja. Die Analyse kommt von Lichess, das kostenlos und Open Source ist, mit Stockfish auf deinem Computer als Reserve.","Sí. El análisis viene de Lichess, que es gratis y de código abierto, con Stockfish en tu propio ordenador como respaldo."],
+t87:["Mag het / is het fair play?","Est-ce autorisé / fair-play ?","Ist das erlaubt / fair?","¿Está permitido / es juego limpio?"],
+t88:["Alles wordt vergrendeld tijdens een live partij, en er is een optie die de add-on tijdens partijen helemaal verbergt. Het helpt alleen bij afgelopen partijen en training.","Tout se verrouille pendant une partie en direct, et une option masque complètement l'extension pendant les parties. Elle n'aide que pour les parties terminées et l'entraînement.","Während einer Live-Partie ist alles gesperrt, und eine Option blendet das Add-on während Partien ganz aus. Es hilft nur bei beendeten Partien und beim Training.","Todo se bloquea durante una partida en vivo, y hay una opción que oculta el complemento por completo mientras juegas. Solo ayuda con partidas terminadas y entrenamiento."],
+t89:["Wat gebeurt er met mijn gegevens?","Que deviennent mes données ?","Was passiert mit meinen Daten?","¿Qué pasa con mis datos?"],
+t90:["Ze blijven in je browser. De optionele synchronisatie gebruikt je eigen Lichess-account, versleuteld met je eigen wachtwoord. Geen statistieken, geen advertenties.","Elles restent dans ton navigateur. La synchronisation facultative utilise ton propre compte Lichess, chiffrée avec ton propre mot de passe. Pas de statistiques, pas de pub.","Sie bleiben in deinem Browser. Die optionale Synchronisierung nutzt dein eigenes Lichess-Konto, verschlüsselt mit deinem eigenen Passwort. Keine Statistik, keine Werbung.","Se quedan en tu navegador. La sincronización opcional usa tu propia cuenta de Lichess, cifrada con tu propia contraseña. Sin estadísticas ni anuncios."],
+t91:["Hoe werk ik bij in Chrome?","Comment mettre à jour dans Chrome ?","Wie aktualisiere ich in Chrome?","¿Cómo actualizo en Chrome?"],
+t92:["Download de nieuwe zip, pak hem uit over dezelfde map en klik op het herlaad-pijltje bij de add-on in <code>chrome://extensions</code>.","Télécharge le nouveau zip, décompresse-le par-dessus le même dossier et clique sur la flèche de rechargement de l'extension dans <code>chrome://extensions</code>.","Lade die neue ZIP-Datei herunter, entpacke sie über denselben Ordner und klick auf den Neu-laden-Pfeil beim Add-on in <code>chrome://extensions</code>.","Descarga el nuevo zip, descomprímelo sobre la misma carpeta y pulsa la flecha de recargar del complemento en <code>chrome://extensions</code>."],
+};
+window.SITE_I18N_UI = {
+  installFor: ["Installeren voor", "Installer pour", "Installieren für", "Instalar para"],
+  soon: ["Firefox: binnenkort", "Firefox : bientôt", "Firefox: bald", "Firefox: pronto"],
+  copied: ["Gekopieerd ✓", "Copié ✓", "Kopiert ✓", "Copiado ✓"],
+  newIn: ["Nieuw in", "Nouveau dans", "Neu in", "Novedades de la"],
+  latest: ["Nieuwste", "Dernière", "Neueste", "Última"],
+};
+</script>
 <script>
-  for (const id of ["ff", "ff2"]) { const a = document.getElementById(id); if (a && !/\.xpi$/.test(a.getAttribute("href"))) { a.classList.add("off"); a.lastChild.textContent = "Firefox: coming soon"; } }
+  const ua = navigator.userAgent;
+  const LANGS = ["en", "nl", "fr", "de", "es"], IDX = { nl: 0, fr: 1, de: 2, es: 3 };
+  const I = window.SITE_I18N || {}, UI = window.SITE_I18N_UI || {};
+  let lang = "en";
+  const ui = (key, en) => (lang === "en" ? en : UI[key]?.[IDX[lang]] ?? en);
+  const isFF = /Firefox\//.test(ua), isMobile = /Android|iPhone|iPad/.test(ua);
+  const ext = /Edg\//.test(ua) ? "edge" : /OPR\//.test(ua) ? "opera" : "chrome";
+  let latest = null;
+
+  function applyLang(l) {
+    lang = LANGS.includes(l) ? l : "en";
+    document.documentElement.lang = lang;
+    for (const el of document.querySelectorAll("[data-t]")) {
+      if (el.dataset.en == null) el.dataset.en = el.innerHTML;
+      const tr = lang === "en" ? null : I[el.dataset.t]?.[IDX[lang]];
+      el.innerHTML = tr ?? el.dataset.en;
+    }
+    document.getElementById("lang").value = lang;
+    try { localStorage.setItem("fcLang", lang); } catch {}
+    decorate();
+  }
+  // Things that depend on the browser or data: run again after every language change.
+  function decorate() {
+    for (const id of ["ff", "ff2"]) { const a = document.getElementById(id); if (a && !/\.xpi$/.test(a.getAttribute("href"))) { a.classList.add("off"); a.lastElementChild ? (a.lastElementChild.textContent = ui("soon", "Firefox: coming soon")) : (a.textContent = ui("soon", "Firefox: coming soon")); } }
+    if (!isFF && !isMobile) {
+      const alt = document.querySelector(".hero .btn[href='#chrome']");
+      alt.textContent = ui("installFor", "Install for") + " " + ({ edge: "Edge", opera: "Opera", chrome: "Chrome" })[ext]; alt.classList.remove("alt");
+      document.getElementById("ff").classList.add("alt");
+      document.getElementById("extUrl").textContent = ext + "://extensions";
+      document.getElementById("chrome").classList.add("you");
+    } else if (isFF) document.getElementById("ff2").closest(".card").classList.add("you");
+    if (latest) document.getElementById("newsHead").textContent = (lang === "en" ? "What's new in" : ui("newIn", "What's new in")) + " " + latest.version;
+    document.querySelectorAll(".vers .new").forEach((x) => (x.textContent = ui("latest", "Latest")));
+  }
+
   // OS tabs in the Chrome guide
   const pickOs = (os) => { for (const b of document.querySelectorAll(".tabs button")) b.setAttribute("aria-selected", b.dataset.os === os); for (const p of document.querySelectorAll(".os")) p.hidden = !p.classList.contains(os); };
   for (const b of document.querySelectorAll(".tabs button")) b.addEventListener("click", () => pickOs(b.dataset.os));
-  const ua = navigator.userAgent;
   pickOs(/Mac/.test(ua) ? "mac" : /Linux|CrOS/.test(ua) && !/Android/.test(ua) ? "lin" : "win");
   // Copy buttons
-  for (const b of document.querySelectorAll("[data-copy]")) b.addEventListener("click", async () => { try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = "Copied ✓"; setTimeout(() => b.textContent = "Copy", 1500); } catch {} });
-  // Point the main button at the visitor's browser
-  const isFF = /Firefox\//.test(ua), isMobile = /Android|iPhone|iPad/.test(ua);
-  const ext = /Edg\//.test(ua) ? "edge" : /OPR\//.test(ua) ? "opera" : "chrome";
-  if (!isFF && !isMobile) {
-    const alt = document.querySelector(".hero .btn.alt");
-    alt.textContent = "Install for " + ({ edge: "Edge", opera: "Opera", chrome: "Chrome" })[ext]; alt.href = "#chrome"; alt.classList.remove("alt");
-    document.getElementById("ff").classList.add("alt");
-    document.getElementById("extUrl").textContent = ext + "://extensions";
-    document.getElementById("chrome").classList.add("you");
-  } else if (isFF) document.getElementById("ff2").closest(".card").classList.add("you");
+  for (const b of document.querySelectorAll("[data-copy]")) b.addEventListener("click", async () => { const was = b.innerHTML; try { await navigator.clipboard.writeText(document.getElementById(b.dataset.copy).textContent); b.textContent = ui("copied", "Copied ✓"); setTimeout(() => (b.innerHTML = was), 1500); } catch {} });
+
+  // Language: saved choice, else the browser's language.
+  let saved = null; try { saved = localStorage.getItem("fcLang"); } catch {}
+  const guess = (navigator.languages || [navigator.language || "en"]).map((x) => x.slice(0, 2).toLowerCase()).find((x) => LANGS.includes(x)) || "en";
+  document.getElementById("lang").addEventListener("change", (e) => applyLang(e.target.value));
+  applyLang(saved || guess);
+
   // What's new, from the release notes
   fetch("latest.json", { cache: "no-store" }).then((r) => r.json()).then((l) => {
     if (!l.notes?.length) return;
-    document.getElementById("newsHead").textContent = "What's new in " + l.version;
+    latest = l;
     const ul = document.getElementById("newsList");
     for (const n of l.notes) { const li = document.createElement("li"); li.textContent = n; ul.append(li); }
     document.getElementById("news").hidden = false;
+    decorate();
   }).catch(() => {});
   // Version history from update.json (every signed Firefox build is kept there).
   fetch("update.json", { cache: "no-store" }).then((r) => r.json()).then((u) => {
@@ -355,12 +511,13 @@
     ul.innerHTML = "";
     list.forEach((v, i) => {
       const li = document.createElement("li");
-      li.innerHTML = `<b></b>${i === 0 ? '<span class="new">Latest</span>' : ""}<span style="flex:1"></span><a>Firefox</a><a>Chrome</a>`;
+      li.innerHTML = `<b></b>${i === 0 ? '<span class="new"></span>' : ""}<span style="flex:1"></span><a>Firefox</a><a>Chrome</a>`;
       li.querySelector("b").textContent = v.version;
       const [ff, cr] = li.querySelectorAll("a");
       ff.href = v.update_link; cr.href = "dl/freechess.com-chrome-" + v.version + ".zip";
       ul.append(li);
     });
+    decorate();
   }).catch(() => { document.getElementById("vers").innerHTML = '<li class="dim">Couldn\'t load the list.</li>'; });
 </script>
 </body>
