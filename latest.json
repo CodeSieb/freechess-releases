@@ -1,12 +1,10 @@
 {
-  "version": "6.19.0",
-  "major": true,
+  "version": "6.19.1",
+  "major": false,
   "notes": [
-    "Share a review as a link anyone can open, and watch it together",
-    "Daily challenge and a weekly friends league on the Home tab",
-    "Challenge a friend with a puzzle, and share opening courses as links"
+    "Chessable tab: the \"doesn't open inside the hub\" bar no longer shows up on lessons that work fine."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.1.zip",
   "date": "2026-11-21"
 }
