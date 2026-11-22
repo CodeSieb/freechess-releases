@@ -1,16 +1,12 @@
 {
-  "version": "6.24.0",
-  "major": true,
+  "version": "6.24.1",
+  "major": false,
   "notes": [
-    "Memory: your own mistakes and your opening moves in one daily spaced-repetition review, each answer followed by the idea behind the move.",
-    "Woodpecker drill: solve the same set of puzzles on your weak spot again and again, faster each cycle.",
-    "Chessable is part of your coach: your Chessable courses with their due reviews show up in Openings, and Today's plan sends you to review or learn new moves in the right course.",
-    "Today's plan follows learning value (your last game, Memory, your weak spot, courses) with one focus theme per week.",
-    "Progress shows how well you remember, training days per week, Woodpecker cycle times and a blunder target for your goal.",
-    "A review only counts once you've actually gone through it; the plan bar shows finished steps itself; the coach never covers the review buttons.",
-    "Streak freeze: one missed day a week doesn't break your streak."
+    "Woodpecker drill: its progress now sits neatly in the puzzle panel (with a progress bar) instead of a squashed column.",
+    "Plan bar: says which step you just finished, and \"You're on it\" only when you're really on that step.",
+    "Small windows: the puzzle panel keeps enough room for the rating, the puzzle and the buttons."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.24.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.24.1.zip",
   "date": "2026-11-22"
 }
