@@ -1,23 +1,12 @@
 {
-  "version": "6.26.0",
-  "major": true,
+  "version": "6.27.0",
+  "major": false,
   "notes": [
-    "New: Play Coach. Play the computer at your level with your coach beside you: comments on every move, warnings about threats, hints in three steps, and takebacks when you blunder.",
-    "Play Coach: your moves get Game Review icons (Brilliant, Best, Excellent, Mistake, Blunder…) on the board and in the move list.",
-    "Play Coach games are saved: continue an unfinished game later, and find finished games (Review, PGN) in Play Coach and My reviews. They're part of your backup too.",
-    "Puzzles: clearer message when your rating doesn't change (Lichess only rates the first try; an expired Lichess login is now explained).",
-    "Your progress is backed up automatically (plan, streak, Memory, puzzles, profile). After a reinstall, enter your restore code in the setup and everything comes back.",
-    "The backup is encrypted on your computer and only holds training data: never your Lichess, chess.com or Chessable login.",
-    "Cleaner header: Today's plan sits in the top bar, and Board, Settings, Shortcuts and Feedback are in one ☰ menu.",
-    "A new look across the whole hub, matched to chess.com: the same colours, buttons, cards and page titles on every tab, in dark and light.",
-    "Today's plan: each step shows an icon for its type and reads like a chess.com list.",
-    "Board coordinates sit inside the squares like on chess.com.",
-    "Chessable gets the whole page, and your study time there counts for Today's plan.",
-    "Plan bar: never shown twice, and never stretched over Chessable.",
-    "Restore code: a Paste button (password managers can't fill fields on add-on pages).",
-    "After an update, an already-open Free Hub says it needs a reload (before, it silently stopped saving, so puzzle ratings didn't update)."
+    "Puzzle rating now works exactly like Lichess: a wrong move, or a hint after you have already moved, costs rating straight away. A hint before your first move only makes the puzzle unrated.",
+    "New: rating milestones. The first time your puzzle rating reaches a new hundred, that puzzle is saved in Achievements so you can replay it.",
+    "Pieces lift and wiggle while you hold them with the mouse, on every freeChess.com board and in analysis."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.26.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.27.0.zip",
   "date": "2026-11-22"
 }
