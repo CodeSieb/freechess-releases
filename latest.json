@@ -1,16 +1,18 @@
 {
-  "version": "6.19.7",
-  "major": false,
+  "version": "6.21.0",
+  "major": true,
   "notes": [
-    "Why? explanations rewritten in plain words: which piece was under attack, what your move missed, what the best move fixes, how the trades end, and a tip to remember.",
-    "Share now copies only the link.",
-    "Bot games: the two players get their own names.",
-    "Shared review page redone: the board fits the screen, buttons right under it, eval bar, play-through, flip, swipe on phones, link to a move, PGN and Lichess buttons.",
-    "Shared links get a preview in chat apps, and you can see how often your reviews were opened (My reviews → Shared by you).",
-    "Game Review: pieces now take longer for longer trips and wiggle into place, and fast-forwarding is calmer.",
-    "Review games against bots and games on chess.com's Analysis board: the Free Review button now shows up there too."
+    "One coach for everything: a player profile built from your reviews, mistakes and puzzles (your old data counts straight away).",
+    "Quick setup: your chess.com ratings, a rating goal and how much time you have a day.",
+    "Today's plan on Home: a short session built around your weak spots, with a bar that leads you step by step.",
+    "New Progress page: goal, rating over time, accuracy and blunders per week, weak spots and whether your training is working, your openings.",
+    "Simpler menu: Home, Play, Review, Train, Learn.",
+    "Your saved mistakes are now sorted by theme (hanging pieces, forks, pins, checkmates…), and games reviewed in the Free Hub count too.",
+    "Boards always fit the screen, also inside chess.com and with the plan bar open.",
+    "The plan bar says when you finish a step and what's next, and lets you skip a step.",
+    "chess.com's menu shows your plan progress on the Free Hub item, and the after-game card names your mistake type with a Train this button."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.19.7.zip",
-  "date": "2026-11-21"
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.21.0.zip",
+  "date": "2026-11-22"
 }
