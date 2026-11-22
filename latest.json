@@ -1,12 +1,16 @@
 {
-  "version": "6.27.0",
+  "version": "6.28.0",
   "major": false,
   "notes": [
-    "Puzzle rating now works exactly like Lichess: a wrong move, or a hint after you have already moved, costs rating straight away. A hint before your first move only makes the puzzle unrated.",
-    "New: rating milestones. The first time your puzzle rating reaches a new hundred, that puzzle is saved in Achievements so you can replay it.",
-    "Pieces lift and wiggle while you hold them with the mouse, on every freeChess.com board and in analysis."
+    "Hints no longer cost puzzle rating: a hint just makes that puzzle unrated. Prefer the Lichess way? Turn on \"Hints cost rating\" in the puzzle settings.",
+    "Chrome: every new version now shows an Update card on Home and a dot on the menu, with Download, unzip and Reload steps.",
+    "After a game: train your opening in a Chessable course you own, or in Openings.",
+    "Progress: a puzzle rating chart, your solve rate, and your strongest and weakest puzzle themes.",
+    "Play Coach: start from an opening (Italian, Sicilian, London…) or from any position (FEN).",
+    "Home: a weekly report every Monday with your training days, rating change, puzzles, reviews and next focus.",
+    "Clearer empty pages, and more texts translated."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.27.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.28.0.zip",
   "date": "2026-11-22"
 }
