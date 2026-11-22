@@ -1,18 +1,13 @@
 {
-  "version": "6.21.0",
-  "major": true,
+  "version": "6.22.0",
+  "major": false,
   "notes": [
-    "One coach for everything: a player profile built from your reviews, mistakes and puzzles (your old data counts straight away).",
-    "Quick setup: your chess.com ratings, a rating goal and how much time you have a day.",
-    "Today's plan on Home: a short session built around your weak spots, with a bar that leads you step by step.",
-    "New Progress page: goal, rating over time, accuracy and blunders per week, weak spots and whether your training is working, your openings.",
-    "Simpler menu: Home, Play, Review, Train, Learn.",
-    "Your saved mistakes are now sorted by theme (hanging pieces, forks, pins, checkmates…), and games reviewed in the Free Hub count too.",
-    "Boards always fit the screen, also inside chess.com and with the plan bar open.",
-    "The plan bar says when you finish a step and what's next, and lets you skip a step.",
-    "chess.com's menu shows your plan progress on the Free Hub item, and the after-game card names your mistake type with a Train this button."
+    "Chessable is part of your coach: your due Chessable reviews show up in Today's plan, and every review you do there counts for your plan and streak.",
+    "Chessable: the \"doesn't open inside the hub\" bar no longer shows on lessons.",
+    "My mistakes moves on by itself when you find the move first time.",
+    "The new screens (setup, Today's plan, Progress, menu) are now in Dutch, French, German and Spanish too."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.21.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.22.0.zip",
   "date": "2026-11-22"
 }
