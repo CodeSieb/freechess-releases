@@ -1,13 +1,13 @@
 {
-  "version": "6.22.0",
+  "version": "6.23.0",
   "major": false,
   "notes": [
-    "Chessable is part of your coach: your due Chessable reviews show up in Today's plan, and every review you do there counts for your plan and streak.",
-    "Chessable: the \"doesn't open inside the hub\" bar no longer shows on lessons.",
-    "My mistakes moves on by itself when you find the move first time.",
-    "The new screens (setup, Today's plan, Progress, menu) are now in Dutch, French, German and Spanish too."
+    "Chessable: the \"doesn't open inside the hub\" bar is really gone on normal pages now, and its ✕ works.",
+    "Every tab has the same look: page titles on Review games and Insights, Play no longer floats in the middle, clearer focus outlines.",
+    "A one-line tip from your coach the first time you open each tab.",
+    "Translations for texts with numbers and names (\"Solve 6 puzzles\", \"Review your game vs …\", key moments) and for the tips."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.22.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.23.0.zip",
   "date": "2026-11-22"
 }

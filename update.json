@@ -73,6 +73,10 @@
         {
           "version": "6.22.0",
           "update_link": "https://codesieb.github.io/freechess-releases/dl/freechess.com-6.22.0.xpi"
+        },
+        {
+          "version": "6.23.0",
+          "update_link": "https://codesieb.github.io/freechess-releases/dl/freechess.com-6.23.0.xpi"
         }
       ]
     }
