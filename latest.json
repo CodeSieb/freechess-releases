@@ -1,18 +1,10 @@
 {
-  "version": "6.29.0",
+  "version": "6.29.1",
   "major": false,
   "notes": [
-    "Play Coach: premoves while the coach thinks, and ←/→ to look back through the game.",
-    "Reviews: \"Play on from here\" continues any of your moves against your coach.",
-    "Home: one click to review your last chess.com game, and a monthly review with three next steps.",
-    "Progress: patterns in your games (when your mistakes happen, white vs black, time controls, blunders in losses).",
-    "Puzzle Rush: new \"My weak spots\" mode on this week's focus theme.",
-    "Guess the move: replay your own lost games and find better moves, judged by Stockfish.",
-    "Analysis → My games: your opening gaps, with one click to add the best move to Memory.",
-    "Endgames: lessons by level with your next lesson suggested.",
-    "Polish: offline notice, a Report button when something breaks (secrets are masked), Auto and High-contrast themes, clear keyboard focus, and screen-reader friendly puzzle and coach messages."
+    "chess.com's \"daily puzzle limit\" popup no longer covers freeChess.com puzzles (it closes itself while freeChess.com is open), and the \"Keep going for free\" card shows once instead of three times."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.29.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.29.1.zip",
   "date": "2026-11-22"
 }
