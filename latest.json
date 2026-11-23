@@ -1,10 +1,14 @@
 {
-  "version": "6.29.1",
-  "major": false,
+  "version": "6.30.0",
+  "major": true,
   "notes": [
-    "chess.com's \"daily puzzle limit\" popup no longer covers freeChess.com puzzles (it closes itself while freeChess.com is open), and the \"Keep going for free\" card shows once instead of three times."
+    "New: train on your phone. Open codesieb.github.io/freechess-releases/m, enter your restore code once, and do your Memory cards, notes and puzzles. It all comes back to the add-on automatically.",
+    "New: Notebook (Learn → Notebook). Save any position from analysis, reviews, puzzles or Play Coach with your own note and tags, review them now and then, and download them as PGN.",
+    "Send 5 puzzles: share a link with your last 5 solved puzzles. Friends play them on their phone or computer, no account needed.",
+    "Share your progress as a picture (Progress).",
+    "30-day challenge on Home: train on 20 of 30 days, with new achievements. Set a daily reminder right there; it tells you what is left of today's plan."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.29.1.zip",
-  "date": "2026-11-22"
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.30.0.zip",
+  "date": "2026-11-23"
 }

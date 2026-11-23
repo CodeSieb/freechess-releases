@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self' https://freechess-com.netlify.app https://lichess.org http://localhost:* http://127.0.0.1:*; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#262421">
+<title>freeChess.com on your phone</title>
+<link rel="stylesheet" href="chessground.base.css"><link rel="stylesheet" href="chessground.brown.css"><link rel="stylesheet" href="chessground.cburnett.css">
+<style>
+:root { --bg:#262421; --card:#312e2b; --line:#3d3a37; --text:#fff; --dim:#bab9b8; --green:#81b64c; --red:#fa412d; }
+@media (prefers-color-scheme: light) { :root { --bg:#f1f1ef; --card:#fff; --line:#e3e2df; --text:#312e2b; --dim:#5c5a57; } }
+* { box-sizing:border-box; } html, body { margin:0; background:var(--bg); color:var(--text); font:15px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+#app { max-width:520px; margin:0 auto; padding:16px 16px calc(24px + env(safe-area-inset-bottom)); display:flex; flex-direction:column; gap:12px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; }
+.hero { text-align:center; } .hero h1 { margin:4px 0; font-size:24px; } .hero.small h1 { font-size:20px; } .logo { font-size:40px; }
+h2 { font-size:16px; margin:0 0 4px; } p { margin:6px 0; } .dim { color:var(--dim); font-size:13px; } .center { text-align:center; }
+label { display:block; font-weight:700; margin-bottom:6px; } label small { display:block; font-weight:400; color:var(--dim); font-size:12.5px; }
+label.check { font-weight:400; display:flex; gap:8px; align-items:center; margin-top:10px; }
+input#code { width:100%; padding:12px; font:600 16px ui-monospace, monospace; letter-spacing:.04em; border-radius:8px; border:1px solid var(--line); background:var(--bg); color:var(--text); }
+.row { display:flex; gap:8px; margin-top:10px; } .row .btn { flex:1; }
+.btn { border:0; border-radius:8px; padding:12px 14px; font:700 15px inherit; font-family:inherit; background:var(--line); color:var(--text); cursor:pointer; min-height:46px; }
+.btn.primary { background:var(--green); color:#fff; box-shadow:0 3px 0 #45753c; }
+.tile { display:flex; flex-direction:column; align-items:flex-start; gap:2px; width:100%; text-align:left; background:var(--card); border:1px solid var(--line); border-radius:12px; padding:16px; color:var(--text); font:inherit; cursor:pointer; }
+.tile b { font-size:17px; } .tile span { color:var(--dim); font-size:13px; }
+.plan { margin:8px 0 0; padding-left:20px; text-align:left; font-size:14px; }
+.msg { min-height:1.2em; color:#f0b45a; font-size:13px; }
+.top { display:flex; align-items:center; gap:10px; } .top b { flex:1; font-size:17px; } .back { border:0; background:none; color:var(--text); font-size:30px; line-height:1; padding:0 8px; cursor:pointer; }
+.board-wrap { width:100%; aspect-ratio:1; } #board { width:100%; height:100%; }
+.status b { font-size:16px; } .status.good { border-color:var(--green); } .status.bad { border-color:var(--red); }
+#toast { position:fixed; left:50%; bottom:calc(20px + env(safe-area-inset-bottom)); transform:translate(-50%, 30px); opacity:0; background:#111; color:#fff; padding:8px 14px; border-radius:8px; transition:.2s; pointer-events:none; font-size:14px; }
+#toast.show { opacity:1; transform:translate(-50%, 0); } #toast.bad { background:#7a1f16; }
+a { color:var(--green); }
+</style>
+</head>
+<body><main id="app"><div class="card center">Loading…</div></main><div id="toast" role="status"></div>
+<script src="app.js"></script>
+</body>
+</html>
