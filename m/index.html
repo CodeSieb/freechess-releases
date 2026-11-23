@@ -83,6 +83,20 @@ cg-board square.check { background:radial-gradient(ellipse at center, rgba(255,0
 #toast { position:fixed; left:50%; bottom:calc(84px + env(safe-area-inset-bottom)); transform:translate(-50%, 20px); opacity:0; background:#111; color:#fff; padding:10px 16px; border-radius:10px; transition:.2s; pointer-events:none; font-size:14px; z-index:10; max-width:calc(100vw - 32px); }
 #toast.show { opacity:1; transform:translate(-50%, 0); } #toast.bad { background:#7a1f16; }
 a { color:var(--green); }
+/* lessons */
+.lrow { display:flex; align-items:center; gap:12px; width:100%; background:none; border:0; border-top:1px solid var(--line); padding:11px 2px; color:var(--text); font:600 15px inherit; font-family:inherit; text-align:left; cursor:pointer; } .lrow.lock { color:var(--dim); }
+.ldot { flex:none; width:26px; height:26px; border-radius:50%; border:2px solid var(--line); display:flex; align-items:center; justify-content:center; font-size:12px; } .ldot.done { background:var(--green); border-color:var(--green); color:#fff; } .ldot svg { width:15px; height:15px; stroke-width:3; }
+.lstars { margin-left:auto; color:#e3aa24; letter-spacing:1px; }
+.view.lessonview { padding:0 0 calc(72px + env(safe-area-inset-bottom)); }
+.ls { display:flex; flex-direction:column; gap:10px; padding:10px 0; } .ls-top { display:flex; align-items:center; gap:10px; padding:0 12px; } .ls-x { background:none; border:0; color:var(--text); font-size:22px; }
+.ls-prog { flex:1; height:12px; border-radius:6px; background:var(--card2); overflow:hidden; } .ls-prog i { display:block; height:100%; width:0; background:var(--green); transition:width .35s; }
+.ls-boardwrap { position:relative; width:100vw; max-width:640px; aspect-ratio:1; } .ls-board { width:100%; height:100%; touch-action:none; -webkit-user-select:none; user-select:none; -webkit-touch-callout:none; }
+.ls-badge { position:absolute; z-index:3; width:28px; height:28px; margin:-10px 0 0 -18px; border-radius:50%; display:none; align-items:center; justify-content:center; color:#fff; font-weight:900; pointer-events:none; } .ls-badge.show { display:flex; } .ls-badge.ok { background:var(--green); } .ls-badge.bad { background:var(--red); }
+.ls-side { padding:0 12px; display:flex; flex-direction:column; gap:10px; } .ls-coach { display:flex; gap:10px; } .ls-av { flex:none; width:38px; height:38px; border-radius:50%; background:var(--green); color:#fff; display:flex; align-items:center; justify-content:center; font-size:20px; }
+.ls-say { flex:1; background:var(--card); border-radius:14px; padding:12px 14px; font-size:14.5px; border-left:4px solid transparent; } .ls-say > b { display:block; font-size:16px; } .ls-say p { margin:4px 0 0; color:var(--dim); } .ls-say.good { border-left-color:var(--green); } .ls-say.bad { border-left-color:var(--red); }
+.ls-acts { display:flex; gap:8px; flex-wrap:wrap; } .ls-btn { flex:1; min-width:120px; border:0; border-radius:10px; padding:13px 10px; font:800 15px inherit; font-family:inherit; background:var(--card2); color:var(--text); box-shadow:0 3px 0 rgba(0,0,0,.25); } .ls-btn.primary { background:var(--green); color:#fff; box-shadow:0 4px 0 var(--green-sh); }
+.ls-done { text-align:center; padding:30px 16px; display:flex; flex-direction:column; align-items:center; gap:6px; } .ls-done .ls-acts { width:100%; } .ls-stars i { font-style:normal; font-size:48px; color:var(--card2); margin:0 4px; } .ls-stars i.on { color:#e3aa24; } .ls-dim { color:var(--dim); font-size:13px; }
+.tabs button span { font-size:11px; }
 </style>
 </head>
 <body><main id="app"><div class="splash">♞</div></main><div id="toast" role="status"></div>

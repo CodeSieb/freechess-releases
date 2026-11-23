@@ -1,10 +1,12 @@
 {
-  "version": "6.30.2",
-  "major": false,
+  "version": "6.31.0",
+  "major": true,
   "notes": [
-    "Fixed: solved puzzles (and some Memory cards and Chessable minutes) sometimes did not count for Today's plan. Every one counts now, and the plan on Home updates live."
+    "New: Lessons (Learn → Lessons). A path of 36 short lessons in 6 units, from your first checkmate to mating patterns: Basics, Tactics, Endgames, Openings, Tactics II and Mating patterns.",
+    "Each lesson shows the idea on a real game, then 4 exercises with instant feedback, hints and stars. Your rating places you, and a Test out quiz can skip a unit.",
+    "A lesson for your weak spot is recommended and added to Today's plan. Positions you miss go into Memory. Lessons also work on the phone page and sync."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.30.2.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.31.0.zip",
   "date": "2026-11-23"
 }
