@@ -1,10 +1,11 @@
 {
-  "version": "6.31.1",
+  "version": "6.32.0",
   "major": false,
   "notes": [
-    "Fixed: ☰ More → Settings did nothing in some Firefox versions (it now always opens). Error reports are easier to read."
+    "Premoves everywhere: in Puzzles, Puzzle Rush, Lessons, Play the computer, Guess the move and on the phone page you can already make your next move while the reply is coming.",
+    "Switch sync accounts: Progress → Backup → Switch account. Switch to another code, merge it into yours, start a new account, or switch back to an account used on this computer. Your progress is always backed up before switching."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.31.1.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.32.0.zip",
   "date": "2026-11-24"
 }
