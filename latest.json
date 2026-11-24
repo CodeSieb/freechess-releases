@@ -1,12 +1,15 @@
 {
-  "version": "6.33.0",
+  "version": "6.34.0",
   "major": true,
   "notes": [
-    "New: your player Report (Review → Report), free: Overview, Blunders, Tactics, Conversion, Clock and Openings, each with its own rating so you see what holds you back.",
-    "Overview: estimated strength, strength over time, your last games and a bar chart of your areas against your rating. Blunders: where they happen and a heatmap of your blind spots. Conversion: wins you let slip. Clock: time trouble, games lost on time, instant blunders.",
-    "Run Review my games again to fill the new Clock and Conversion chapters for older games."
+    "New menu: Home, Report, Train, Play, Learn, Tools and Brain Games, with chess.com-style fly-out menus.",
+    "New trainers: Blunder Shield (is this move safe?), Conversion Trainer (win your winning positions against Stockfish) and Sparring (play your own openings against your coach).",
+    "New tools: Board Editor and Board Setup, Elo Calculator, Chess Pieces and a Chess Clock for over-the-board games.",
+    "Brain Games: Square Colour, Knight Sprint, Attack Count and Board Memory, 60 seconds each.",
+    "Your Report now drives Today's plan: the area that holds your rating back most gets its trainer every day, and Progress shows how your areas improve.",
+    "Settings is redesigned, with your restore code and account switching in one place."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.33.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.34.0.zip",
   "date": "2026-11-24"
 }
