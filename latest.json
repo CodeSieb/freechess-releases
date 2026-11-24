@@ -1,15 +1,10 @@
 {
-  "version": "6.34.0",
-  "major": true,
+  "version": "6.34.1",
+  "major": false,
   "notes": [
-    "New menu: Home, Report, Train, Play, Learn, Tools and Brain Games, with chess.com-style fly-out menus.",
-    "New trainers: Blunder Shield (is this move safe?), Conversion Trainer (win your winning positions against Stockfish) and Sparring (play your own openings against your coach).",
-    "New tools: Board Editor and Board Setup, Elo Calculator, Chess Pieces and a Chess Clock for over-the-board games.",
-    "Brain Games: Square Colour, Knight Sprint, Attack Count and Board Memory, 60 seconds each.",
-    "Your Report now drives Today's plan: the area that holds your rating back most gets its trainer every day, and Progress shows how your areas improve.",
-    "Settings is redesigned, with your restore code and account switching in one place."
+    "Learning now goes through Chessable: the built-in lessons are gone, and Today's plan adds a Chessable step (a course that fits your weak spot first)."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.34.0.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.34.1.zip",
   "date": "2026-11-24"
 }
