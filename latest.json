@@ -1,12 +1,10 @@
 {
-  "version": "6.31.0",
-  "major": true,
+  "version": "6.31.1",
+  "major": false,
   "notes": [
-    "New: Lessons (Learn → Lessons). A path of 36 short lessons in 6 units, from your first checkmate to mating patterns: Basics, Tactics, Endgames, Openings, Tactics II and Mating patterns.",
-    "Each lesson shows the idea on a real game, then 4 exercises with instant feedback, hints and stars. Your rating places you, and a Test out quiz can skip a unit.",
-    "A lesson for your weak spot is recommended and added to Today's plan. Positions you miss go into Memory. Lessons also work on the phone page and sync."
+    "Fixed: ☰ More → Settings did nothing in some Firefox versions (it now always opens). Error reports are easier to read."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.31.0.zip",
-  "date": "2026-11-23"
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.31.1.zip",
+  "date": "2026-11-24"
 }
