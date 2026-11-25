@@ -1,10 +1,14 @@
 {
-  "version": "6.34.2",
-  "major": false,
+  "version": "6.35.0",
+  "major": true,
   "notes": [
-    "Fixed: in Woodpecker drills your puzzle rating only went down. Now only the first time you meet a puzzle counts; repeats are practice without rating change, like on Lichess."
+    "Puzzles: your rating per theme (forks, pins, mates…), a new \"My weak themes\" mode, and a daily puzzle streak. Normal Lichess puzzles stay the same.",
+    "After a game: solve your own blunder as a puzzle; it also goes into Memory.",
+    "Chessable: a card on Home (due reviews, your courses, study streak), study minutes on Progress, and course links in Report and Sparring.",
+    "New: a short tour of the menu, a Help page with search, and descriptions in the menus.",
+    "Light theme and stability fixes on every page."
   ],
   "url": "https://codesieb.github.io/freechess-releases/",
-  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.34.2.zip",
+  "chrome": "https://codesieb.github.io/freechess-releases/dl/freechess.com-chrome-6.35.0.zip",
   "date": "2026-11-25"
 }
